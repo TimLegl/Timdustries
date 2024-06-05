@@ -1,0 +1,12 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.image-align img{
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+}
