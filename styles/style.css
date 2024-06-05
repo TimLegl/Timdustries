@@ -17,6 +17,11 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif; /*Für Input Felder angelegt, prüfen ob nötig*/
 }
 
+/* TEMPORÄR FÜR MOBILE VERSION BIS MEDIA QUERIES DRIN */
+html, body {
+  overflow: scroll;
+}
+
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.6;
