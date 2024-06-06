@@ -819,18 +819,23 @@ footer li {
     padding: 0 20px;
   }
 
+  .navbar {
+    height: auto;
+  }
+
   /* NAVIGATION */
   .navbar ul {
     flex-direction: column;
+    padding: 10px;
+  }
+
+  .navbar ul li {
+    padding: 1vw;
   }
 
   .navbar .flex {
     flex-direction: column;
     overflow: visible; /*Prüfen aber sonst sind Home|Features & Docs nicht sichtbar */
-  }
-
-  .navbar ul {
-    padding: -10px;
   }
 
   /* EXAMPLES */
@@ -864,6 +869,10 @@ footer li {
   /* FOOTER */
   footer ul {
     flex-direction: column;
+  }
+
+  footer ul li {
+    padding: 1vw 0;
   }
 
   footer .socials {
