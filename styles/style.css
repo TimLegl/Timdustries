@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
 
+/* OVERFLOW WEGEN FLEX-DIREKTION UND GRÖßE DER ELEMENTE IN NAVBAR
+- ÄNDERN AUF FLEX-DIRECTION COLUMN IN MEDIA QUERIES
+- SCHRIFTGRÖßE KLEINER
+- SELBE BEI FOOTER
+- BEI EXAMPLES ABSTAND ZWISCHEN ELEMENTEN VERTIKAL
+- UMBRUCH BEI BILDERN NEBENEINANDERN MITTELS GRID ANDERS
+- UNTERSTÜTZTE SPRACHEN KLEINER/2 nebeneinandner
+
+*/
+
+
 :root {
   --primary-color: #FFBB0D;
   --secondary-color: #542E71;
@@ -17,11 +28,6 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif; /*Für Input Felder angelegt, prüfen ob nötig*/
 }
 
-/* TEMPORÄR FÜR MOBILE VERSION BIS MEDIA QUERIES DRIN */
-html, body {
-  overflow: scroll;
-}
-
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.6;
@@ -31,11 +37,11 @@ body {
 a {
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: 2.8vw;
 }
 
 p {
-  font-size: 1.4rem;
+  font-size: 2.8vw;
 }
 
 ul {
@@ -43,21 +49,21 @@ ul {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 4vw;
   color: var(--primary-color);
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 3.6vw;
 }
 
 h3 {
-  font-size: 1.6rem;
+  font-size: 3.2vw;
   font-weight: normal;
 }
 
 h4 {
-  font-size: 1.4rem;
+  font-size: 2.8vw;
   color: var(--primary-color);
 }
 
@@ -92,7 +98,7 @@ button {
   "ease" bedeutet, dass der Übergang sanft startet und endet.
   */
   transition: transform 0.5s ease-in-out 0.1s;
-  font-size: 1.4rem;
+  font-size: 2.8vw;
 }
 
 button:hover {
@@ -226,7 +232,7 @@ button:hover {
   border-bottom: 1px solid var(--secondary-color);
   width: 100%;
   padding: 3px; /*Abstand zwischen border und placeholder-Text der Input Felder */
-  font-size: 1.4rem;
+  font-size: 2.8vw;
 }
 
 /* In vielen Browsern wird das Manipulieren der Felder durch automatisches einfügen gesperrt. Muss wenn mit JavaScript angepasst werden
@@ -758,14 +764,14 @@ footer li {
 
 .fehlermeldungText::placeholder {
   color: var(--error-color);
-  font-size: 1.2rem;
+  font-size: 2.4vw;
 }
 
 
 .hinweisTextStyle p {
   color: var(--error-color);
   padding: 4px;
-  line-height: 1.6rem;
+  line-height: 3.2vw;
 }
 
 .hinweisRahmenDreieck{
@@ -776,7 +782,7 @@ footer li {
 
 .hinweisRahmen {
   /* Muss important beinhalten, da sonst von showcase-form input[type=text] überschrieben wird, da dies spezifischer ist */
-  border: 1px solid var(--error-color) !important; 
+  border: 1px solid var(--error-color) !important;
 }
 
 /* Inneres Dreieck */
@@ -804,6 +810,131 @@ footer li {
   border-bottom: 9px solid var(--error-color);
   border-left: 9px solid transparent;
 }
+
+/* --------------------------------------------------------------- */
+/* Mobile */
+@media (max-width: 500px) {
+  /* UTILITIES */
+  .container {
+    padding: 0 20px;
+  }
+
+  /* NAVIGATION */
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .navbar .flex {
+    flex-direction: column;
+    overflow: visible; /*Prüfen aber sonst sind Home|Features & Docs nicht sichtbar */
+  }
+
+  .navbar ul {
+    padding: -10px;
+  }
+
+  /* EXAMPLES */
+  .card-collection {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+  }
+
+  /* CLI */
+  .cli .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cli .grid > *:first-child {
+    grid-column: 1;
+    /* grid-column: 1 / span 2;
+    grid-row: 1 / span 2; */
+  }
+
+  /* SHOWCASE */
+  .showcase .grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* SUPPORTED LANGUAGES */
+  .supported-languages .container {
+    padding: 0;
+  }
+
+  /* FOOTER */
+  footer ul {
+    flex-direction: column;
+  }
+
+  footer .socials {
+    gap: 10px;
+  }
+
+  footer .container {
+    padding: 0 20px;
+  }
+}
+
+
+
+/* Media Queries einbauen
+
+Tablets and under
+@media (max-width: 768px) {
+  .grid,
+  .showcase .grid,
+  .stats .grid,
+  .cli .grid,
+  .cloud .grid,
+  .features-main .grid,
+  .docs-main .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .showcase {
+    height: auto;
+  }
+
+  .showcase-text {
+    text-align: center;
+    margin-top: 40px;
+    animation: slideInFromTop 1s ease-in;
+  }
+
+  .showcase-form {
+    justify-self: center;
+    margin: auto;
+    animation: slideInFromBottom 1s ease-in;
+  }
+
+  .cli .grid > *:first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .features-head,
+  .features-sub-head,
+  .docs-head {
+    text-align: center;
+  }
+
+  Setzt die Bilder in die Mitte
+  .features-head img,
+  .features-sub-head img,
+  .docs-head img{
+    justify-self: center;
+  }
+
+  .features-main .grid >*:first-child,
+  .features-main .grid >*:nth-child(2) {
+    grid-column: 1;
+  }
+}
+
+
+*/
+
 
 /* LORUKI
 
@@ -1020,6 +1151,6 @@ PROBLEME:
 - in style.css bei 1:29:47 im Video - bei zu langem Text in den Feldern sehen die Grids unordentlich aus
 
 -Abstände über Sektionen, nicht einzelne Überschriften etc
-- Abstände mit rem statt px testen
+- Abstände mit vw statt px testen
 - ALT attribute eintragen
 */
