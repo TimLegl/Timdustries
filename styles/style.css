@@ -13,7 +13,7 @@
 
 :root {
   --primary-color: #FFBB0D;
-  --secondary-color: #542E71;
+  --secondary-color: #2F2D2E;
   /* --dark-color: #000000; */
   --light-color: #ecf0f1;
   --success-color: #0BD45E;
@@ -37,11 +37,11 @@ body {
 a {
   text-decoration: none;
   font-weight: bold;
-  font-size: 2.8vw;
+  font-size: 1.2rem;
 }
 
 p {
-  font-size: 2.8vw;
+  font-size: 1.2rem;
 }
 
 ul {
@@ -49,21 +49,22 @@ ul {
 }
 
 h1 {
-  font-size: 4vw;
+  font-size: 2rem;
   color: var(--primary-color);
 }
 
 h2 {
-  font-size: 3.6vw;
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
 }
 
 h3 {
-  font-size: 3.2vw;
+  font-size: 1.6rem;
   font-weight: normal;
 }
 
 h4 {
-  font-size: 2.8vw;
+  font-size: 1.4rem;
   color: var(--primary-color);
 }
 
@@ -85,7 +86,6 @@ code {
 /* Button Variante 1 */
 button {
   color: var(--light-color);
-  margin-top: 10px;
   width: auto;
   padding: 10px;
   background-color: var(--secondary-color);
@@ -98,7 +98,7 @@ button {
   "ease" bedeutet, dass der Übergang sanft startet und endet.
   */
   transition: transform 0.5s ease-in-out 0.1s;
-  font-size: 2.8vw;
+  font-size: 1.2rem;
 }
 
 button:hover {
@@ -181,7 +181,7 @@ button:hover {
 }
 
 .showcase-form h2 {
-  margin: 0 20px 8px;
+  padding: 0 20px 1rem;
 }
 
 /* Schräger Balken
@@ -216,7 +216,7 @@ button:hover {
 .showcase .grid {
   overflow: visible;
   /* grid-template-columns: 55% 45%; */
-  gap: 40px;
+  gap: 1rem;
 }
 
 .showcase-form input[type="text"],
@@ -232,7 +232,7 @@ button:hover {
   border-bottom: 1px solid var(--secondary-color);
   width: 100%;
   padding: 3px; /*Abstand zwischen border und placeholder-Text der Input Felder */
-  font-size: 2.8vw;
+  font-size: 1.4rem;
 }
 
 /* In vielen Browsern wird das Manipulieren der Felder durch automatisches einfügen gesperrt. Muss wenn mit JavaScript angepasst werden
@@ -298,8 +298,6 @@ input[type="submit"] {
   position: relative;  /* Macht Elemente sichtbar, sonst werden sie von dem abgeschrägten Element überdeckt */
 }
 
-
-
 #wave-form {
   position: relative;
   width: 100%;
@@ -310,6 +308,7 @@ input[type="submit"] {
 .references svg {
   padding-bottom: 20px;
   color: var(--light-color);
+  font-size: 4rem;
 }
 
 .references p {
@@ -322,12 +321,17 @@ input[type="submit"] {
 
 .references .grid {
   gap: 40px;
-  padding: 40px 0;
+}
+
+.references h2 {
+  color: var(--primary-color);
+  padding-bottom: 2rem;
 }
 
 .references h3 {
   color: var(--primary-color);
 }
+
 
 /* EXAMPLES */
 .examples {
@@ -447,7 +451,6 @@ Mit der TRANSFORM Eigenschaft lassen sich Objekte drehen, skalieren, verzerren, 
 
 .company h2 {
   color: var(--secondary-color);
-  padding-bottom: 40px;
 }
 
 .company .grid {
@@ -516,6 +519,7 @@ Animationen lassen sich mittels CSS animation-Eigenschaft und @keyframes erstell
 
 .cloud img {
   transition: 0.5s ease-in-out 0.1s;
+  padding: 40px 0;
 }
 
 .cloud img:hover {
@@ -524,7 +528,7 @@ Animationen lassen sich mittels CSS animation-Eigenschaft und @keyframes erstell
 
 .cloud .grid {
   grid-template-columns: 1fr;
-  gap: 40px;
+  /* gap: 40px; */
 }
 
 .cloud a {
@@ -546,6 +550,10 @@ Animationen lassen sich mittels CSS animation-Eigenschaft und @keyframes erstell
   color: var(--secondary-color);
 }
 
+.supported-languages p {
+  font-size: 1rem;
+}
+
 .supported-languages .card {
   margin: 20px 20px;
   /* Langsame Bewegung bei :hover */
@@ -564,7 +572,6 @@ Animationen lassen sich mittels CSS animation-Eigenschaft und @keyframes erstell
 
 .supported-languages h2 {
   text-align: center;
-  padding-bottom: 20px;
 }
 
 /* FOOTER */
@@ -764,14 +771,14 @@ footer li {
 
 .fehlermeldungText::placeholder {
   color: var(--error-color);
-  font-size: 2.4vw;
+  font-size: 1.2rem;
 }
 
 
 .hinweisTextStyle p {
   color: var(--error-color);
   padding: 4px;
-  line-height: 3.2vw;
+  line-height: 1.6rem;
 }
 
 .hinweisRahmenDreieck{
@@ -812,11 +819,49 @@ footer li {
 }
 
 /* --------------------------------------------------------------- */
-/* Mobile */
+/*
+Meist genutzte Bildschirmauflösungen Weltweit Desktop:
+  1920×1080, 1366×768, 1536×864, 1280×720, 1440×900
+  Marktanteil: 44.95%
+*/
+
+
+/* Mobile (320px = Schmalste Bildschirmbreite iPhone 5 / Rest zwischen 375 - 414)
+Meist genutzte Bildschirmauflösungen Weltweit Mobile:
+	360×800, 390×844, 414×896, 375×667, 412×732
+  Marktanteil: 52.81%
+*/
 @media (max-width: 500px) {
   /* UTILITIES */
   .container {
     padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 1rem;
+    color: var(--primary-color);
+  }
+  
+  h2 {
+    font-size: 0.9rem;
+    padding-bottom: 1rem;
+  }
+  
+  h3 {
+    font-size: 0.8rem;
+    font-weight: normal;
+  }
+  
+  h4 {
+    font-size: 0.7rem;
+  }
+
+  a {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
   }
 
   .navbar {
@@ -830,12 +875,18 @@ footer li {
   }
 
   .navbar ul li {
+    /* padding: 1rem; */
     padding: 1vw;
   }
 
   .navbar .flex {
     flex-direction: column;
     overflow: visible; /*Prüfen aber sonst sind Home|Features & Docs nicht sichtbar */
+  }
+
+  /* REFERENZEN */
+  .references svg {
+    font-size: 3rem;
   }
 
   /* EXAMPLES */
@@ -872,18 +923,27 @@ footer li {
   }
 
   footer ul li {
-    padding: 1vw 0;
-  }
-
-  footer .socials {
-    gap: 10px;
+    /* padding: 1rem 0; */
+    padding: 1vw;
   }
 
   footer .container {
     padding: 0 20px;
   }
+
+  .grid-footer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .socials {
+    
+  }
 }
 
+/* Meist genutzte Bildschirmauflösungen Weltweit Tablet:
+	768×1024, 810×1080, 1280×800, 1024×768, 1920×1080
+  Marktanteil: 1.83%
+  */
 
 
 /* Media Queries einbauen
@@ -1160,6 +1220,6 @@ PROBLEME:
 - in style.css bei 1:29:47 im Video - bei zu langem Text in den Feldern sehen die Grids unordentlich aus
 
 -Abstände über Sektionen, nicht einzelne Überschriften etc
-- Abstände mit vw statt px testen
+- Abstände mit rem statt px testen
 - ALT attribute eintragen
 */
