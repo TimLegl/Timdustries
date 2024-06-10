@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
   */
   const nachnameMuster = /^[a-zäöüßàáâãäåçèéêëìíîïðñòóôõöùúûüýÿæœ]{3,}$/i;
   const vornameMuster = /^[a-zäöüßàáâãäåçèéêëìíîïðñòóôõöùúûüýÿæœ]{2,}$/i;
-  const emailMuster = /^[a-z0-9ß]{4}@(web|hotmail|outlook|gmail|proton)(\.(de|com))$/i;
+  const emailMuster = /^[a-z0-9ß]{4,}@(web|hotmail|outlook|gmail|proton)(\.(de|com))$/i;
   const telefonMuster = /^\d{10,}$/;
 
 
