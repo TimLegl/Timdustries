@@ -31,6 +31,7 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.6;
+  background-color: var(--primary-color);
 }
 
 /* Superior Elements */
@@ -227,7 +228,7 @@ button:hover {
   color: var(--secondary-color);
   /* border: 0; */
   border: none;
-  border-radius: 0;
+  border-radius: 0; /* Wichtig für Mobile Version */
   border-bottom: 1px solid var(--secondary-color);
   width: 100%;
   font-size: 1.4rem;
@@ -919,6 +920,11 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
   /* REFERENZEN */
   .references svg {
     font-size: 3rem;
+  }
+
+  #wave-form {
+    margin: 0 0 -10px 0;
+    padding: 0;
   }
 
   /* EXAMPLES */
