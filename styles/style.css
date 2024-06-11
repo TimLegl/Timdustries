@@ -227,6 +227,7 @@ button:hover {
   color: var(--secondary-color);
   /* border: 0; */
   border: none;
+  border-radius: 0;
   border-bottom: 1px solid var(--secondary-color);
   width: 100%;
   font-size: 1.4rem;
