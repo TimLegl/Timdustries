@@ -299,6 +299,7 @@ input[type="submit"] {
 
 #wave-form {
   margin: 0 0 -10px 0;
+  padding: 0;
   position: relative;
   width: 100%;
   background-color: var(--primary-color);
