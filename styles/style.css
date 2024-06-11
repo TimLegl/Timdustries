@@ -258,6 +258,7 @@ input:-webkit-autofill {
   z-index: 1; /* Positioniert Formular vor dem Hintergrund */
   background-color: var(--light-color);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  min-width: 122px; /* Sonst rutscht "Node" bei Mobiler Version in eine Zeile mit nachfolger  */
 }
 
 input:focus {
@@ -604,12 +605,17 @@ footer li {
 .socials {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 2rem;
+}
+
+.socials svg {
+  width: 40px;
+  height: 40px;
 }
 
 .socials a {
   color: var(--primary-color);
-  width: 20px;
+  width: 40px;
   transition: scale 0.5s ease-in-out 0.1s;
 }
 
@@ -863,14 +869,20 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
   }
 
   p {
-    font-size: 1rem;
+    /* Hälfte von Desktop x 1.25 */
+    font-size: 0.75rem;
+  }
+
+  
+  /* NAVIGATION */
+  .logo {
+    margin: 0;
   }
 
   .navbar {
     height: auto;
   }
 
-  /* NAVIGATION */
   .navbar ul {
     flex-direction: column;
     padding: 10px;
@@ -894,6 +906,15 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
   .showcase .grid {
     grid-template-columns: 1fr;
     gap: 1.25rem;
+  }
+
+  .showcase-form input[type='text'], .showcase-form input[type='email'] {
+    font-size: 0.875rem;
+  }
+
+  /* SHOWCASE FEHLERMELDUNG */
+  .fehlermeldungText::placeholder {
+    font-size: 0.75rem;
   }
 
   /* REFERENZEN */
@@ -924,6 +945,10 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
     padding: 0;
   }
 
+  .supported-languages .card {
+    margin: 10px 10px;
+  }
+
   /* FOOTER */
   footer ul {
     flex-direction: column;
@@ -945,6 +970,7 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
   .socials {
     padding-top: 20px;
     gap: 20px;
+    grid-column: 1 / 3; /* Nimmt so die ganze Breite ein von Spalte 1 - 3 (Also Spalte 1 und 2) */
   }
 }
 
