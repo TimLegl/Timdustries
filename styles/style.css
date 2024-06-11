@@ -181,7 +181,7 @@ button:hover {
 }
 
 .showcase-form h2 {
-  padding: 0 20px 1rem;
+  padding: 0 0 1rem;
 }
 
 /* Schräger Balken
@@ -838,13 +838,15 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
   }
 
   h1 {
-    font-size: 1rem;
+    /* Hälfte von Desktop x 1.25 */
+    font-size: 1.25rem;
     color: var(--primary-color);
   }
   
   h2 {
-    font-size: 0.9rem;
-    padding-bottom: 1rem;
+    /* Hälfte von Desktop x 1.25 */
+    font-size: 1.125rem;
+    padding-bottom: 0.5rem;
   }
   
   h3 {
@@ -884,6 +886,16 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
     overflow: visible; /*Prüfen aber sonst sind Home|Features & Docs nicht sichtbar */
   }
 
+  /* SHOWCASE */
+  .showcase-form h2 {
+    padding-bottom: 0.5rem;
+  }
+
+  .showcase .grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
   /* REFERENZEN */
   .references svg {
     font-size: 3rem;
@@ -905,11 +917,6 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
     grid-column: 1;
     /* grid-column: 1 / span 2;
     grid-row: 1 / span 2; */
-  }
-
-  /* SHOWCASE */
-  .showcase .grid {
-    grid-template-columns: 1fr;
   }
 
   /* SUPPORTED LANGUAGES */
@@ -1223,4 +1230,6 @@ PROBLEME:
 -Abstände über Sektionen, nicht einzelne Überschriften etc
 - Abstände mit rem statt px testen
 - ALT attribute eintragen
+- Socials flex/grid überarbeiten
+- Code vereinfachen und vereinheitlichen
 */
