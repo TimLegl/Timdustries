@@ -298,6 +298,10 @@ input[type="submit"] {
   position: relative;  /* Macht Elemente sichtbar, sonst werden sie von dem abgeschrägten Element überdeckt */
 }
 
+.references {
+  padding: 0 0 50px 0;
+}
+
 #wave-form {
   margin: 0 0 -10px 0;
   padding: 0;
@@ -327,6 +331,7 @@ input[type="submit"] {
 .references h2 {
   color: var(--primary-color);
   padding-bottom: 2rem;
+  padding-top: 2rem;
 }
 
 .references h3 {
