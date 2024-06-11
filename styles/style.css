@@ -298,10 +298,10 @@ input[type="submit"] {
 }
 
 #wave-form {
+  margin: 0 0 -10px 0;
   position: relative;
   width: 100%;
   background-color: var(--primary-color);
-  margin-bottom: -10px;
 }
 
 .references svg {
