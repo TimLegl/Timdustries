@@ -219,19 +219,16 @@ button:hover {
   gap: 1rem;
 }
 
-.showcase-form input[type="text"],
-.showcase-form input[type="email"] {
-  margin: 20px 0;
-  background-color: var(--light-color);
-  color: var(--secondary-color);
-}
-
 .showcase-form input[type='text'],
 .showcase-form input[type='email'] {
-  border: 0;
+  margin: 20px 0;
+  padding: 3px; /*Abstand zwischen border und placeholder-Text der Input Felder */
+  background-color: var(--light-color);
+  color: var(--secondary-color);
+  /* border: 0; */
+  border: none;
   border-bottom: 1px solid var(--secondary-color);
   width: 100%;
-  padding: 3px; /*Abstand zwischen border und placeholder-Text der Input Felder */
   font-size: 1.4rem;
 }
 
