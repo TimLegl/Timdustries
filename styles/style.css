@@ -75,6 +75,7 @@ img {
   max-width: 100%;
   border: none;
   outline: none;
+  height: auto;
 }
 
 code,
