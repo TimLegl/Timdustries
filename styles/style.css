@@ -847,6 +847,7 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
   /* UTILITIES */
   .container {
     padding: 0 20px;
+    margin: 0;
   }
 
   h1 {
