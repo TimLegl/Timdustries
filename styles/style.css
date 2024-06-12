@@ -70,8 +70,11 @@ h4 {
 }
 
 img {
+  display: block;
   width: 100%;
-  display: block; /* Notwenig für mobile Version (default: inline-block) */
+  max-width: 100%;
+  border: none;
+  outline: none;
 }
 
 code,
