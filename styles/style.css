@@ -306,7 +306,7 @@ input[type="submit"] {
   margin: 0 0 -10px 0;
   padding: 0;
   position: relative;
-  width: 100%;
+  width: 100vw;
   background-color: var(--primary-color);
 }
 
@@ -925,10 +925,6 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
   /* REFERENZEN */
   .references svg {
     font-size: 3rem;
-  }
-
-  #wave-form {
-    margin: 0 -100px;
   }
 
   /* EXAMPLES */
