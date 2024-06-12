@@ -71,6 +71,7 @@ h4 {
 
 img {
   width: 100%;
+  display: block; /* Notwenig für mobile Version (default: inline-block) */
 }
 
 code,
