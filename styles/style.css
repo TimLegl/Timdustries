@@ -306,11 +306,11 @@ input[type="submit"] {
   margin: 0 0 -10px 0;
   padding: 0;
   position: relative;
-  width: 100vw;
+  width: 100%;
   background-color: var(--primary-color);
 }
 
-.references svg {
+.references-content svg {
   padding-bottom: 20px;
   color: var(--light-color);
   font-size: 4rem;
@@ -877,7 +877,6 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
     /* Hälfte von Desktop x 1.25 */
     font-size: 0.75rem;
   }
-
   
   /* NAVIGATION */
   .logo {
@@ -923,7 +922,7 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
   }
 
   /* REFERENZEN */
-  .references svg {
+  .references-content svg {
     font-size: 3rem;
   }
 
