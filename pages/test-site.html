@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./../styles/style.css">
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="./../styles/style.css"> -->
     <!-- Font Awesome Kit -->
     <script src="https://kit.fontawesome.com/b703539e16.js" crossorigin="anonymous"></script>
     <!-- Font Awesome / lokal eingebunden -->
@@ -19,6 +20,150 @@
     <!-- Selfmade Icon als Favicon -->
     <!-- <link rel="icon" type="image/svg" href="./icons/double-circle.svg"> -->
     <script src="./scripts/main.js"></script>
+    <style>
+
+    :root {
+      --primary-color: #FFBB0D;
+      --secondary-color: #2F2D2E;
+      /* --dark-color: #000000; */
+      --light-color: #ecf0f1;
+      --success-color: #0BD45E;
+      --error-color: #C91D1D;
+    }
+
+    /* Default */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Verdana, Geneva, Tahoma, sans-serif; /*Für Input Felder angelegt, prüfen ob nötig*/
+    }
+
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      line-height: 1.6;
+      background-color: var(--primary-color);
+    }
+
+    img {
+      width: 100%;
+    }
+
+    /* UTILITIES */
+    /* Rahmen */
+    .container {
+      max-width: 1100px;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      /* Abstand zu Seitenrändern */
+      padding: 0 50px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Wenn nebeneinander passt wiederholend / 2 x 1fr (Fraktion = gleichmäßige Aufteilung in Fraktionen ) */
+      /* grid-template-columns: 1fr 1fr; alternativ ohne repeat */
+    }
+
+    .grid-3 {
+     grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    /* REFERENCES */
+    .references {
+      padding: 50px 0;
+      /* Keine feste Höhe, sonst rutschen Bilder und Text beim verkleinern aus dem Container */
+      /* height: 500px; */
+      background-color: var(--secondary-color);
+      position: relative;  /* Macht Elemente sichtbar, sonst werden sie von dem abgeschrägten Element überdeckt */
+    }
+
+    .references {
+      padding: 0 0 50px 0;
+    }
+
+    #wave-form {
+      margin: 0 0 -10px 0;
+      padding: 0;
+      position: relative;
+      width: 100%;
+      background-color: var(--primary-color);
+    }
+
+    .references-content svg {
+      padding-bottom: 20px;
+      color: var(--light-color);
+      font-size: 4rem;
+    }
+
+    .references p {
+      color: var(--light-color);
+    }
+
+    .references-content {
+      animation: slideInFromBottom 1s ease-in;
+    }
+
+    .references .grid {
+      gap: 40px;
+    }
+
+    .references h2 {
+      color: var(--primary-color);
+      padding-bottom: 2rem;
+      padding-top: 2rem;
+    }
+
+    .references h3 {
+      color: var(--primary-color);
+    }
+
+    /* MEDIA QUERIES */
+    @media (max-width: 500px) {
+    /* UTILITIES */
+    .container {
+      padding: 0 20px;
+    }
+
+    h1 {
+      /* Hälfte von Desktop x 1.25 */
+      font-size: 1.25rem;
+      color: var(--primary-color);
+    }
+    
+    h2 {
+      /* Hälfte von Desktop x 1.25 */
+      font-size: 1.125rem;
+      padding-bottom: 0.5rem;
+    }
+    
+    h3 {
+      font-size: 0.8rem;
+      font-weight: normal;
+    }
+    
+    h4 {
+      font-size: 0.7rem;
+    }
+
+    a {
+      font-size: 1rem;
+    }
+
+    p {
+      /* Hälfte von Desktop x 1.25 */
+      font-size: 0.75rem;
+    }
+
+    /* REFERENZEN */
+    .references-content svg {
+      font-size: 3rem;
+    }
+
+  }
+    </style>
 </head>
 <body>
 
