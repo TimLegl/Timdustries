@@ -61,14 +61,13 @@
       /* Abstand zu Seitenrändern */
     }
 
-
-
-
+    section {
+    }
 
 
     /* REFERENCES */
     .references {
-      padding: 50px 0;
+      margin-bottom: 500px;
       /* Keine feste Höhe, sonst rutschen Bilder und Text beim verkleinern aus dem Container */
       /* height: 500px; */
       background-color: var(--secondary-color);
@@ -84,6 +83,31 @@
       max-width: none;
       right: 0;
       left: 0;
+    }
+
+    .wave-as-bg-1 {
+      background: url(./../images/wave-black.svg);
+      width: 100%;
+      height: auto;
+      background-color: #C91D1D;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      padding-bottom: 200px;
+    }
+
+    .wave-as-bg-2 {
+      background: url(./../images/wave-black.svg);
+      width: 100%;
+      height: auto;
+      background-color: green;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: relative;
+      padding-bottom: 200px;
+
     }
 
     .references-content svg {
@@ -158,6 +182,83 @@
 <body>
   <!-- FUNKTIONIERT AUßERHALB AM BESTEN / BEZOGEN AUF FIREFOX FÜR DESKTOP VERSION -->
   <img id="wave-form" src="./../images/wave-black.svg" alt="wave form">
+  <section class="references" role="references">
+    <div class="container text-center">
+      <h2>Erleben Sie Cloud Hosting einer neuen Generation.</h2>
+      <div class="references-content grid grid-3">
+        <div>
+          <i class="fa-solid fa-server"></i>
+          <h3>High End Server</h3>
+          <p>120</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-database fa-4x"></i>
+          <h3>Uploaded Files</h3>
+          <p>250.000 TB</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-building fa-4x"></i> 
+          <h3>Happy Companies</h3>
+          <p>1500</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNKTIONIERT AUßERHALB AM BESTEN / BEZOGEN AUF FIREFOX FÜR DESKTOP VERSION -->
+  <section class="references" role="references">
+    <img id="wave-form" src="./../images/wave-black.svg" alt="wave form">
+    <div class="container text-center">
+      <h2>Erleben Sie Cloud Hosting einer neuen Generation.</h2>
+      <div class="references-content grid grid-3">
+        <div>
+          <i class="fa-solid fa-server"></i>
+          <h3>High End Server</h3>
+          <p>120</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-database fa-4x"></i>
+          <h3>Uploaded Files</h3>
+          <p>250.000 TB</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-building fa-4x"></i> 
+          <h3>Happy Companies</h3>
+          <p>1500</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="references" role="references">
+    <div class="wave-as-bg-1">
+      
+    </div>
+    <div class="container text-center">
+      <h2>Erleben Sie Cloud Hosting einer neuen Generation.</h2>
+      <div class="references-content grid grid-3">
+        <div>
+          <i class="fa-solid fa-server"></i>
+          <h3>High End Server</h3>
+          <p>120</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-database fa-4x"></i>
+          <h3>Uploaded Files</h3>
+          <p>250.000 TB</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-building fa-4x"></i> 
+          <h3>Happy Companies</h3>
+          <p>1500</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-as-bg-2">
+    
+  </div>
   <section class="references" role="references">
     <div class="container text-center">
       <h2>Erleben Sie Cloud Hosting einer neuen Generation.</h2>
