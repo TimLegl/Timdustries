@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- CSS -->
     <!-- <link rel="stylesheet" href="./../styles/style.css"> -->
@@ -47,29 +47,23 @@
     }
 
     img {
+      display: block;
       width: 100%;
     }
 
     /* UTILITIES */
     /* Rahmen */
     .container {
-      max-width: 1100px;
+
       justify-content: center;
       align-items: center;
-      margin: 0 auto;
+
       /* Abstand zu Seitenrändern */
-      padding: 0 50px;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); /* Wenn nebeneinander passt wiederholend / 2 x 1fr (Fraktion = gleichmäßige Aufteilung in Fraktionen ) */
-      /* grid-template-columns: 1fr 1fr; alternativ ohne repeat */
-    }
 
-    .grid-3 {
-     grid-template-columns: repeat(3, 1fr);
-    }
+
+
 
 
     /* REFERENCES */
@@ -81,16 +75,13 @@
       position: relative;  /* Macht Elemente sichtbar, sonst werden sie von dem abgeschrägten Element überdeckt */
     }
 
-    .references {
-      padding: 0 0 50px 0;
-    }
-
     #wave-form {
-      margin: 0 0 -10px 0;
+      margin: 0 0 -15px 0;
       padding: 0;
       position: relative;
-      width: 100%;
+      /* width: 100%; */
       background-color: var(--primary-color);
+      max-width: none;
     }
 
     .references-content svg {
@@ -108,24 +99,25 @@
     }
 
     .references .grid {
-      gap: 40px;
+      text-align: center;
     }
 
     .references h2 {
       color: var(--primary-color);
       padding-bottom: 2rem;
       padding-top: 2rem;
+      text-align: center;
     }
 
     .references h3 {
       color: var(--primary-color);
     }
 
+
     /* MEDIA QUERIES */
     @media (max-width: 500px) {
     /* UTILITIES */
     .container {
-      padding: 0 20px;
     }
 
     h1 {
@@ -158,32 +150,48 @@
       font-size: 0.75rem;
     }
 
-    /* REFERENZEN */
-    .references-content svg {
-      font-size: 3rem;
-    }
-
   }
     </style>
 </head>
 <body>
-
+  <!-- FUNKTIONIERT AUßERHALB AM BESTEN / BEZOGEN AUF FIREFOX FÜR DESKTOP VERSION -->
   <img id="wave-form" src="./../images/wave-black.svg" alt="wave form">
+  <section class="references" role="references">
+    <div class="container text-center">
+      <h2>Erleben Sie Cloud Hosting einer neuen Generation.</h2>
+      <div class="references-content grid grid-3">
+        <div>
+          <i class="fa-solid fa-server"></i>
+          <h3>High End Server</h3>
+          <p>120</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-database fa-4x"></i>
+          <h3>Uploaded Files</h3>
+          <p>250.000 TB</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-building fa-4x"></i> 
+          <h3>Happy Companies</h3>
+          <p>1500</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Referenzen img in section-->
+<!-- 
+  // Referenzen img in section
   <section class="references" role="references">
     <img id="wave-form" src="./../images/wave-black.svg" alt="wave form">
     <div class="container text-center">
       <h2>Erleben Sie Cloud Hosting einer neuen Generation.</h2>
       <div class="references-content grid grid-3">
         <div>
-          <!-- i oder span für Icons / Direktzugriff auf Font Awesome Bibliothek über Link im Meta Tag-->
           <i class="fa-solid fa-server"></i>
           <h3>High End Server</h3>
           <p>120</p>
         </div>
         <div>
-          <!-- fa-solid: Icon Art | fa-database: Icon Name | fa-3x: 3-fach vergrößert -->
           <i class="fa-solid fa-database fa-4x"></i>
           <h3>Uploaded Files</h3>
           <p>250.000 TB</p>
@@ -197,20 +205,18 @@
     </div>
   </section>
 
-  <!-- Referenzen img über section -->
+  // Referenzen img über section
   <img id="wave-form" src="./../images/wave-black.svg" alt="wave form">
   <section class="references" role="references">
     <div class="container text-center">
       <h2>Erleben Sie Cloud Hosting einer neuen Generation.</h2>
       <div class="references-content grid grid-3">
         <div>
-          <!-- i oder span für Icons / Direktzugriff auf Font Awesome Bibliothek über Link im Meta Tag-->
           <i class="fa-solid fa-server"></i>
           <h3>High End Server</h3>
           <p>120</p>
         </div>
         <div>
-          <!-- fa-solid: Icon Art | fa-database: Icon Name | fa-3x: 3-fach vergrößert -->
           <i class="fa-solid fa-database fa-4x"></i>
           <h3>Uploaded Files</h3>
           <p>250.000 TB</p>
@@ -224,7 +230,7 @@
     </div>
   </section>
 
-  <!-- Referenzen  img in div -->
+  // Referenzen  img in div
   <section class="references" role="references">
     <div>
       <img id="wave-form" src="./../images/wave-black.svg" alt="wave form">
@@ -233,13 +239,11 @@
       <h2>Erleben Sie Cloud Hosting einer neuen Generation.</h2>
       <div class="references-content grid grid-3">
         <div>
-          <!-- i oder span für Icons / Direktzugriff auf Font Awesome Bibliothek über Link im Meta Tag-->
           <i class="fa-solid fa-server"></i>
           <h3>High End Server</h3>
           <p>120</p>
         </div>
         <div>
-          <!-- fa-solid: Icon Art | fa-database: Icon Name | fa-3x: 3-fach vergrößert -->
           <i class="fa-solid fa-database fa-4x"></i>
           <h3>Uploaded Files</h3>
           <p>250.000 TB</p>
@@ -251,7 +255,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 </body>
 </html>
