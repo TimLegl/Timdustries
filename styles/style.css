@@ -31,7 +31,10 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.6;
-  background-color: var(--primary-color);
+  background-color: var(--light-color);
+  /* Wichtig für Optik bei Zoom */
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 /* Superior Elements */
@@ -313,15 +316,31 @@ input[type="submit"] {
 #wave-form {
   background: url(./../images/wave-black.svg);
   width: 100%;
-  height: auto;
+  /* height: auto; */
   background-color: var(--primary-color);
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: 100%;
+  /* Wichtig für ungewollte Seitenabstände */
+  background-size: cover;
   position: relative;
-  border: none;
-  outline: none;
-  margin-bottom: -10px;
+  /* border: none; */
+  /* outline: none; */
+  margin-bottom: -4px;
+  padding-bottom: 140px; /*Wichtig, dass Form sichtbar - prüfen*/
+}
+
+#wave-form-1 {
+  background: url(./../images/wave-black.svg);
+  width: 100%;
+  /* height: auto; */
+  background-color: var(--primary-color);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  /* border: none; */
+  /* outline: none; */
+  margin-bottom: -4px;
   padding-bottom: 200px; /*Wichtig, dass Form sichtbar - prüfen*/
 }
 
@@ -677,10 +696,15 @@ footer li {
   grid-template-columns: auto 3fr auto;
 }
 
-
 /* Zentrieren von Text und Elementen (Siehe reference) */
 .text-center {
   text-align: center;
+}
+
+.seperator {
+  height: 200px;
+  background-color: red;
+  border: 2px solid black;
 }
 
 /* ANIMATIONS */
@@ -867,18 +891,18 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
     font-size: 1.25rem;
     color: var(--primary-color);
   }
-  
+
   h2 {
     /* Hälfte von Desktop x 1.25 */
     font-size: 1.125rem;
     padding-bottom: 0.5rem;
   }
-  
+
   h3 {
     font-size: 0.8rem;
     font-weight: normal;
   }
-  
+
   h4 {
     font-size: 0.7rem;
   }
@@ -891,7 +915,7 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
     /* Hälfte von Desktop x 1.25 */
     font-size: 0.75rem;
   }
-  
+
   /* NAVIGATION */
   .logo {
     margin: 0;
@@ -940,9 +964,9 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
     font-size: 3rem;
   }
 
-  #wave-form {
+  /* #wave-form {
     width: 100%;
-  }
+  } */
 
   /* EXAMPLES */
   .card-collection {
