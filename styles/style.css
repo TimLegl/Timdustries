@@ -320,46 +320,7 @@ input[type="submit"] {
   background-color: var(--primary-color);
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: contain; /*Alternativ cover - zeigt Form nicht komplett/Rahmen passt aber besser */
-  position: relative;
-  /* border: none; */
-  /* outline: none; */
-  margin-bottom: -4px; /* Verhindert schmalen Rahmen zwischen Modulen */
-  height: 140px; /* Macht Form sichtbar */
-}
-
-.wave-container-1 {
-  position: relative;
-  height: 300px;
-  background-color: var(--secondary-color);
-}
-
-#wave-form-1 {
-  background: url(./../images/wave-black.svg);
-  /* width: 100%; */
-  /* height: auto; */
-  background-color: var(--primary-color);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: contain; /*Alternativ cover - zeigt Form nicht komplett */
-  position: relative;
-  /* border: none; */
-  /* outline: none; */
-  margin-bottom: -4px; /* Verhindert schmalen Rahmen zwischen Modulen */
-  height: 140px; /* Macht Form sichtbar */
-}
-
-.wave-container-2 {
-}
-
-#wave-form-2 {
-  background: url(./../images/wave-black.svg);
-  /* width: 100%; */
-  /* height: auto; */
-  background-color: var(--primary-color);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover; /*Alternativ cover - zeigt Form nicht komplett */
+  background-size: cover; /* Cover für Desktop, contain für Mobile*/
   position: relative;
   /* border: none; */
   /* outline: none; */
@@ -988,7 +949,8 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
     font-size: 3rem;
   }
 
-  #wave-form-2 {
+  #wave-form {
+    /* Wichtig damit ganze Form sichtbar */
     background-size: contain;
   }
 
