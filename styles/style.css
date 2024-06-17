@@ -344,6 +344,21 @@ input[type="submit"] {
   padding-bottom: 200px; /*Wichtig, dass Form sichtbar - prüfen*/
 }
 
+#wave-form-2 {
+  background: url(./../images/wave-black.svg);
+  width: 100%;
+  /* height: auto; */
+  background-color: var(--primary-color);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  /* border: none; */
+  /* outline: none; */
+  margin-bottom: -4px;
+  height: 140px; /*Wichtig, dass Form sichtbar - prüfen*/
+}
+
 .references-content svg {
   padding-bottom: 20px;
   color: var(--light-color);
