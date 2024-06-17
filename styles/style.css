@@ -320,43 +320,12 @@ input[type="submit"] {
   background-color: var(--primary-color);
   background-position: bottom;
   background-repeat: no-repeat;
-  /* Wichtig für ungewollte Seitenabstände */
   background-size: cover;
   position: relative;
   /* border: none; */
   /* outline: none; */
-  margin-bottom: -4px;
-  padding-bottom: 140px; /*Wichtig, dass Form sichtbar - prüfen*/
-}
-
-#wave-form-1 {
-  background: url(./../images/wave-black.svg);
-  width: 100%;
-  /* height: auto; */
-  background-color: var(--primary-color);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  /* border: none; */
-  /* outline: none; */
-  margin-bottom: -4px;
-  padding-bottom: 200px; /*Wichtig, dass Form sichtbar - prüfen*/
-}
-
-#wave-form-2 {
-  background: url(./../images/wave-black.svg);
-  width: 100%;
-  /* height: auto; */
-  background-color: var(--primary-color);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  /* border: none; */
-  /* outline: none; */
-  margin-bottom: -4px;
-  height: 140px; /*Wichtig, dass Form sichtbar - prüfen*/
+  margin-bottom: -4px; /* Verhindert schmalen Rahmen zwischen Modulen */
+  height: 140px; /* Macht Form sichtbar */
 }
 
 .references-content svg {
@@ -664,17 +633,18 @@ footer li {
 .socials svg {
   width: 40px;
   height: 40px;
+  transition: scale 0.5s ease-in-out 0.1s;
+}
+
+.socials svg:hover {
+  scale: 0.95;
 }
 
 .socials a {
   color: var(--primary-color);
   width: 40px;
-  transition: scale 0.5s ease-in-out 0.1s;
 }
 
-.socials a:hover {
-  scale: 0.95;
-}
 
 /* UTILITIES */
 /* Rahmen */
