@@ -9,8 +9,7 @@
 - UNTERSTÜTZTE SPRACHEN KLEINER/2 nebeneinandner
 
 */
-
-
+/* HOME WEBSEITE */
 :root {
   --primary-color: #FFBB0D;
   --secondary-color: #2F2D2E;
@@ -371,6 +370,10 @@ input[type="submit"] {
 .examples .card {
   /* Ausgangszustand */
   transform: translateY(0);
+  height: 100%; /* Passt Höhe der Karte an Elterncontainer an */
+  text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 /*
@@ -1004,6 +1007,19 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
     gap: 20px;
     grid-column: 1 / 3; /* Nimmt so die ganze Breite ein von Spalte 1 - 3 (Also Spalte 1 und 2) */
   }
+}
+
+/* FEATURES WEBSEITE */
+.features-head h1 {
+  color: var(--secondary-color);
+}
+
+.features-head div {
+  margin: 0 auto;
+}
+
+.features-head div img {
+  width: 300px;
 }
 
 /* Meist genutzte Bildschirmauflösungen Weltweit Tablet:
