@@ -119,6 +119,7 @@ button:hover {
 /* NAVBAR */
 .navigation {
   background-color: var(--secondary-color);
+  height: 70px;
 }
 
 .navbar {
@@ -219,7 +220,7 @@ button:hover {
 .showcase .grid {
   overflow: visible;
   /* grid-template-columns: 55% 45%; */
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .showcase-form input[type='text'],
@@ -664,6 +665,7 @@ footer li {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .grid {
@@ -1020,6 +1022,10 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
 
 .features-head div img {
   width: 300px;
+}
+
+.features-sub-head i {
+  font-size: 10vw;
 }
 
 /* Meist genutzte Bildschirmauflösungen Weltweit Tablet:
