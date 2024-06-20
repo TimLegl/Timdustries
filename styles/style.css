@@ -877,7 +877,7 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
 @media (max-width: 500px) {
   /* UTILITIES */
   .container {
-    padding: 0 20px;
+    padding: 0 1rem;
   }
 
   h1 {
