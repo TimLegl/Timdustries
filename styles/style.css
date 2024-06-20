@@ -955,7 +955,11 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
 
   /* REFERENZEN */
   .references-content svg {
-    font-size: 3rem;
+    font-size: 2rem;
+  }
+
+  .references .grid {
+    gap: 20px;
   }
 
   #wave-form {
