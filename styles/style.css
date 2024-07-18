@@ -979,17 +979,20 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
   .references .grid {
     gap: 20px;
   }
+    
 
   #wave-form {
     /* Wichtig damit ganze Form sichtbar */
-    background-size: contain;
-    height: 40px;
+    /* background-size: contain; */
+    background-size: cover;
+    /* Muss min. 50px, sonst wird teils abgeschnitten */
+    height: 50px;
   }
 
   /* EXAMPLES */
-  .card-collection {
+  .examples .grid {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
     gap: 20px;
   }
 
@@ -1000,8 +1003,8 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
 
   .cli .grid > *:first-child {
     grid-column: 1;
-    /* grid-column: 1 / span 2;
-    grid-row: 1 / span 2; */
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
   }
 
   /* SUPPORTED LANGUAGES */
@@ -1025,9 +1028,6 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
 
   footer .container {
     padding: 0 20px;
-  }
-
-  .grid-footer {
   }
 
   .socials {
@@ -1058,10 +1058,55 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
   font-size: 10vw;
 }
 
+/* Tablets und darunter */
+@media (max-width: 768px) {
+  
+  html {
+    background-color: #C91D1D;
+  }
+
+  
+
+  /* REFERENZEN */
+  .references-content.grid.grid-3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* BEISPIELE */
+  
+
+  /* CLI */
+  .cli .grid > *:first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .cli .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+
+
+}
+/* Kleine Bildschirme und Laptops (769px - 1024px)*/
+
+/* Desktops und große Bildschirme (1025px - 1200px)*/
+/* HIER */
+
+/* Extra Große Bildschirme (1201px und mehr) */
+/* HIER */
+
 /* Meist genutzte Bildschirmauflösungen Weltweit Tablet:
 	768×1024, 810×1080, 1280×800, 1024×768, 1920×1080
   Marktanteil: 1.83%
   */
+/* 
+320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV */
 
 
 /* Media Queries einbauen
