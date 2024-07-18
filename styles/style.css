@@ -879,6 +879,24 @@ footer li {
   border-left: 9px solid transparent;
 }
 
+
+/* FEATURES WEBSEITE */
+.features-head h1 {
+  color: var(--secondary-color);
+}
+
+.features-head div {
+  margin: 0 auto;
+}
+
+.features-head div img {
+  width: 300px;
+}
+
+.features-sub-head i {
+  font-size: 10vw;
+}
+
 /* --------------------------------------------------------------- */
 /*
 Meist genutzte Bildschirmauflösungen Weltweit Desktop:
@@ -892,6 +910,67 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
 	360×800, 390×844, 414×896, 375×667, 412×732
   Marktanteil: 52.81%
 */
+
+/* MEDIA QUERIES VON ALLGEMEIN NACH SPEZIFISCHER AUFBAUEN, DA BEISPIELSWEISE DIE REGELN VON "max-width: 768px" AUCH AUF "max-width: 500px" ANGEWANDT WERDEN, DA ALLES UNTER 768 AUCH 500 BEINHALTET */
+
+/* Tablets und darunter */
+@media (max-width: 768px) {
+  
+  html {
+    background-color: #C91D1D;
+  }
+
+  .navigation h1 {
+    font-size: 1.2rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  /* SHOWCASE */
+  .showcase .grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  /* REFERENZEN */
+  .references-content.grid.grid-3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* BEISPIELE */
+  .examples .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* CLI */
+  .cli .grid > *:first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .cli .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  /* FOOTER */
+  .grid-footer {
+    grid-template-columns: 1fr;
+  }
+
+  footer nav {
+    margin-bottom: 20px;
+  }
+
+  .socials {
+    justify-content: flex-start;
+    margin-left: 20px;
+  }
+
+}
+
 @media (max-width: 500px) {
   /* UTILITIES */
   .container {
@@ -937,6 +1016,14 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
     height: 120px;
   }
 
+  .navigation .flex {
+    justify-content: space-between;
+  }
+
+  .navigation h1 {
+    font-size: 1rem;
+  }
+
   .navbar ul {
     flex-direction: column;
     padding: 10px;
@@ -945,11 +1032,6 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
   .navbar ul li {
     /* padding: 1rem; */
     padding: 1vw;
-  }
-
-  .navbar .flex {
-    flex-direction: column;
-    overflow: visible; /*Prüfen aber sonst sind Home|Features & Docs nicht sichtbar */
   }
 
   /* SHOWCASE */
@@ -991,7 +1073,7 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
 
   /* EXAMPLES */
   .examples .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
     /* grid-template-rows: 1fr 1fr; */
     gap: 20px;
   }
@@ -1003,7 +1085,6 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
 
   .cli .grid > *:first-child {
     grid-column: 1;
-    grid-column: 1 / span 2;
     grid-row: 1 / span 2;
   }
 
@@ -1039,55 +1120,6 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
     width: 30px;
     height: 30px;
   }
-}
-
-/* FEATURES WEBSEITE */
-.features-head h1 {
-  color: var(--secondary-color);
-}
-
-.features-head div {
-  margin: 0 auto;
-}
-
-.features-head div img {
-  width: 300px;
-}
-
-.features-sub-head i {
-  font-size: 10vw;
-}
-
-/* Tablets und darunter */
-@media (max-width: 768px) {
-  
-  html {
-    background-color: #C91D1D;
-  }
-
-  
-
-  /* REFERENZEN */
-  .references-content.grid.grid-3 {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  /* BEISPIELE */
-  
-
-  /* CLI */
-  .cli .grid > *:first-child {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .cli .grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-  }
-
-
-
 }
 /* Kleine Bildschirme und Laptops (769px - 1024px)*/
 
