@@ -920,10 +920,6 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
 
 /* Tablets und darunter */
 @media (max-width: 768px) {
-  
-  html {
-    background-color: #C91D1D;
-  }
 
   h1 {
     font-size: 1.6rem;
