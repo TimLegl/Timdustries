@@ -943,6 +943,11 @@ footer nav a:hover {
 /* MOBILE */
 @media (max-width: 500px) {
 
+  /* Wichtig, sonst in mobiler Version bei Karten über ganze Breite falsche Schriftgröße */
+  p {
+    font-size: 0.77rem;
+  }
+
   .features-main .grid-3 {
     grid-template-columns: repeat(1, 1fr);
   }
