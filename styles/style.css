@@ -251,6 +251,10 @@ input:-webkit-autofill {
   outline: none; /*Entfernt den Rahmen wenn man auf ein Input Feld klickt*/
 }
 
+.showcase button {
+  margin-top: 20px;
+}
+
 /* Von "form" zu ".card" geändert um das Element bei der Sektion "examples" wieder zu verwenden*/
 .card {
   border: none;
@@ -612,6 +616,7 @@ footer {
 footer p {
   color: var(--primary-color);
   font-size: 1rem;
+  font-style: italic;
 }
 
 footer nav a {
@@ -920,6 +925,34 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
     background-color: #C91D1D;
   }
 
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.44rem;
+  }
+
+  h3 {
+    font-size: 1.28rem;
+  }
+
+  a {
+    font-size: 0.96rem;
+  }
+
+  p {
+    font-size: 0.96rem;
+  }
+
+  .showcase-form input[type='text'], .showcase-form input[type='email'] {
+    font-size: 1.12rem;
+  }
+
+  button {
+    font-size: 1.12rem;
+  }
+
   .navigation h1 {
     font-size: 1.2rem;
   }
@@ -969,6 +1002,16 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
     margin-left: 20px;
   }
 
+  #copyright h4 {
+    font-size: 1rem;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+
+
+
 }
 
 @media (max-width: 500px) {
@@ -978,33 +1021,31 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
   }
 
   h1 {
-    /* Hälfte von Desktop x 1.25 */
-    font-size: 1.25rem;
-    color: var(--primary-color);
+    font-size: 1.28rem;
   }
 
   h2 {
-    /* Hälfte von Desktop x 1.25 */
-    font-size: 1.125rem;
-    padding-bottom: 0.5rem;
+    font-size: 1.15rem;
   }
 
   h3 {
-    font-size: 0.8rem;
-    font-weight: normal;
-  }
-
-  h4 {
-    font-size: 0.7rem;
+    font-size: 1.02rem;
   }
 
   a {
-    font-size: 1rem;
+    font-size: 0.77rem;
   }
 
   p {
-    /* Hälfte von Desktop x 1.25 */
-    font-size: 0.75rem;
+    font-size: 0.77rem;
+  }
+
+  .showcase-form input[type='text'], .showcase-form input[type='email'] {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.96rem;
   }
 
   /* NAVIGATION */
@@ -1119,6 +1160,14 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
   .socials svg {
     width: 30px;
     height: 30px;
+  }
+
+  #copyright h4 {
+    font-size: 0.9rem;
+  }
+
+  footer p {
+    font-size: 0.7rem;
   }
 }
 /* Kleine Bildschirme und Laptops (769px - 1024px)*/
