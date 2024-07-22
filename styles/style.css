@@ -630,9 +630,6 @@ footer nav a:hover {
   border-bottom: 2px solid var(--primary-color); /* Ändere die untere Grenze bei Hover */
 }
 
-footer li {
-}
-
 .socials {
   display: flex;
   flex-wrap: wrap;
@@ -866,7 +863,6 @@ footer li {
 }
 
 .features-sub-head img {
-  width: 300px;
   justify-self: flex-end;
 }
 
@@ -877,7 +873,6 @@ footer li {
 .card {
   gap: 20px;
   margin: 0;
-
 }
 
 .features-main .grid > *:first-child {
@@ -897,7 +892,7 @@ footer li {
 }
 
 .features-head div img {
-  width: 300px;
+  width: 20vw;
 }
 
 .features-sub-head svg {
@@ -912,6 +907,94 @@ footer li {
 .grid-footer {
   gap: 0;
 }
+
+/* Tablets and under */
+@media (max-width: 768px) {
+
+  .features-head .grid {
+    gap: 0;
+  }
+
+  .features-head .grid,
+  .features-sub-head .grid
+   {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* MAIN */
+  .features-main .grid-3 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .features-main .grid > *:first-child {
+    grid-column: 1 / span 4;
+  }
+
+  .features-main .grid > *:nth-child(4) {
+    grid-column: 1 / span 4;
+  }
+
+  .features-main .grid > *:not(:first-child):not(:nth-child(4)) {
+    grid-column: span 2;
+  }
+   
+}
+
+/* MOBILE */
+@media (max-width: 500px) {
+
+  .features-main .grid-3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .features-main .grid > * {
+    grid-column: 1 / span 1 !important;
+  }
+  
+}
+
+
+/* BACKUP */
+/* Tablets and under
+@media (max-width: 768px) {
+
+  .features-head .grid {
+    gap: 0;
+  }
+
+  .features-head .grid,
+  .features-sub-head .grid
+   {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .features-main .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+    
+  .features-main .grid > *:nth-child(2) {
+    grid-column: auto ;
+  } 
+
+  .features-main .grid > *:nth-child(4) {
+    grid-column: 1 / span 3;
+  }
+
+  .features-main .grid > *:nth-child(5) {
+    grid-column: 1 / span 2;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .features-main .grid-3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+}
+*/
 
 
 
