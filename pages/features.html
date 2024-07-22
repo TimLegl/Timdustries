@@ -5,12 +5,11 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-    crossorigin="anonymous" />
+  <!-- Font Awesome Kit -->
+  <script src="https://kit.fontawesome.com/b703539e16.js" crossorigin="anonymous"></script>
   <!-- Erst Allgemeine Styles einbinden, dann spezifischere -->
-  <link rel="stylesheet" href="./../styles/style.css" />
   <link rel="stylesheet" href="./../styles/utilities.css" />
+  <link rel="stylesheet" href="./../styles/style.css" />
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="./../favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./../favicon/favicon-32x32.png">
@@ -27,20 +26,22 @@
       <div class="logo">
         <div class="logo-left">
           <i>
-            <img id="selfmade-icon" src="./../icons/icon-0.1.svg" alt="company logo first letter">
+            <img id="selfmade-icon" src="../icons/icon-0.1.svg" alt="company logo first letter">
           </i>
         </div>
         <div class="logo-right">
           <h1>imdustries</h1>
         </div>
       </div>
-      <nav>
-        <ul>
-          <li><a href="./../index.html">Home</a></li>
-          <li><a href="./features.html">Seite neu laden</a></li>
-          <li><a href="./download.html">Download</a></li>         
-        </ul>
-      </nav>
+      <div>
+        <nav>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./pages/features.html">Features</a></li>
+            <li><a href="./pages/download.html">Download</a></li>          
+          </ul>
+        </nav>
+      </div>
     </div>
   </section>
 
@@ -48,7 +49,7 @@
   <section class="features-head bg-primary py-3">
     <div class="container grid">
       <div>
-        <h1>Features.</h1>
+        <h2>Features.</h2>
         <p>Erkunden Sie all unsere Features, mich von der Konkurrenz abheben. Sollten Sie fragen haben, nehmen Sie gerne jederzeit Kontakt für die Home-Seite mit dem Formular mit mir auf.</p>
       </div>
       <div>
@@ -63,20 +64,20 @@
     <div class="container grid grid-4">
 
       <div>
-        <h1 class="md">Serverlandschaft.</h1>
+        <h2 class="md">Serverlandschaft.</h2>
         <p class="text-primary">
           Das Speichern von Daten auf unseren Servern ist sowohl sicher als auch einfach. Unsere Server nutzen modernste Verschlüsselungstechnologien, um sicherzustellen, dass Ihre Daten vor unbefugtem Zugriff geschützt sind. Durch kontinuierliche Sicherheitsupdates und regelmäßige Überprüfungen gewährleisten wir den Schutz Ihrer Informationen rund um die Uhr. Der Prozess der Datenspeicherung ist benutzerfreundlich gestaltet, sodass Sie mit wenigen Klicks Ihre Daten hochladen und verwalten können. Mit automatisierten Backups und redundanten Systemen bieten wir zusätzliche Sicherheit und Zuverlässigkeit. Vertrauen Sie auf unsere Infrastruktur, um Ihre Daten sicher und unkompliziert zu speichern.
         </p>
       </div>
       <div class="flex">
-        <i class="fas fa-server fa-10x"></i>
+        <i class="fas fa-server"></i>
       </div>
     </div>
   </section>
 
   <!-- Wenn nur eine der .card Klassen einen zu langen Test beinhalten, wird die gesamte Zeile höher skaliert -->
   <!-- my-2 entfernt -->
-  <section class="features-main">
+  <section class="features-main py-3">
     <div class="container grid grid-3">
       <div class="card flex">
         <i class="fas fa-server fa-3x"></i>
@@ -117,8 +118,31 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
+    <div class="container grid grid-footer">
+      <nav>
+        <ul class="flex flex-start">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="docs.html">Download</a></li>
+        </ul>
+      </nav>
+      <div class="socials flex-end">
+        <a href="#"><i class="fa-brands fa-github fa-2x"></i></a>
+        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+      </div>
+      <div id="copyright">
+        <h4>Timdustries</h4>
+        <p>Copyright &copy; 2024</p>
+      </div>
+    </div>
+  </footer>  
+
+  <!-- Footer -->
+  <!-- <footer>
     <div class="container grid grid-footer">
       <div>
         <h4>Übungwebseite</h4>
@@ -138,14 +162,14 @@
         <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
       </div>
     </div>
-  </footer>  
+  </footer>   -->
 
   <!-- Footer
   <footer class="bg-dark py-5">
     <div class="container grid grid-3">
       <div>
-        <h1>Loruki
-        </h1>
+        <h2>Loruki
+        </h2>
         <p>Copyright &copy; 2020</p>
       </div>
       <nav>
