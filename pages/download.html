@@ -10,6 +10,7 @@
     crossorigin="anonymous" />
   <link rel="stylesheet" href="./../styles/utilities.css" />
   <link rel="stylesheet" href="./../styles/style.css" />
+  <link rel="stylesheet" href="./../styles/download.css">
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="./../favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./../favicon/favicon-32x32.png">
@@ -23,30 +24,44 @@
   <!-- Navbar -->
   <section class="navigation" role="navigation">
     <div class="navbar container flex">
-      <div class="logo">Übungswebseite</div>
-      <nav>
-        <ul>
-          <li><a href="./../index.html">Home</a></li>
-          <li><a href="./features.html">Features</a></li>
-          <li><a href="./download.html">Seite neu laden</a></li>   
-        </ul>
-      </nav>
+      <div class="logo">
+        <div class="logo-left">
+          <i>
+            <img id="selfmade-icon" src="../icons/icon-0.1.svg" alt="company logo first letter">
+          </i>
+        </div>
+        <div class="logo-right">
+          <h1>imdustries</h1>
+        </div>
+      </div>
+      <div>
+        <nav>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./../pages/features.html">Features</a></li>
+            <li><a href="./../pages/download.html">Download</a></li>          
+          </ul>
+        </nav>
+      </div>
     </div>
   </section>
 
+
   <!-- Head -->
-  <section class="docs-head bg-primary py-3">
+  <section class="download-head bg-primary py-3">
     <div class="container grid">
       <div>
         <h1 class="xl">Docs</h1>
-        <p class="lead">Learn how to work with the Timuki platform</p>
+        <p class="lead">Timdustries Dokumentation.
+          <br>
+          Von überall, für alle Geräte.</p>
       </div>
-      <img src="Bilder/docs.png" alt="">
+      <img src="./../images/docs.png" alt="">
     </div>
   </section>
 
     <!-- Docs main -->
-    <section class="docs-main my-4">
+    <section class="download-main my-4">
       <div class="container grid">
         <div class="card bg-light p-3">
           <!-- my-2 entfernt -->
@@ -54,7 +69,7 @@
           <nav>
             <ul>
               <li><a class="text-primary" href="#">Introduction</a></li>
-              <li><a href="#">About Timuki</a></li>
+              <li><a href="#">About Timdustries</a></li>
               <li><a href="#">Installation</a></li>
             </ul>
           </nav>
@@ -80,7 +95,10 @@
           <h3>Lorem, ipsum dolor.</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis debitis eos quo quae ipsam vitae architecto cupiditate minima tempora esse.
           </p>
-          <a href="#" class="btn btn-primary">Install CLI</a>
+          <button>
+            <!-- <a href="#" class="btn btn-primary">Install CLI</a> -->
+            <a href="#">Install CLI</a>
+          </button>
           <h3>Requirements</h3>
           <ul>
             <li>Windows 10, Mac OSX, Linux</li>
@@ -88,11 +106,11 @@
           </ul>
           <h3>Install</h3>
           <p>Mac (Homebrew)</p>
-          <pre><code>$ brew install loruki-cli</code></pre>
+          <pre><code>$ brew install timdustries-cli</code></pre>
           <p>NPM</p>
-          <pre><code>$ npm install loruki-cli</code></pre>
+          <pre><code>$ npm install timdustries-cli</code></pre>
           <p>Yarn</p>
-          <pre><code>$ yarn install loruki-cli</code></pre>
+          <pre><code>$ yarn install timdustries-cli</code></pre>
         </div>
       </div>
     </section>
@@ -100,25 +118,25 @@
   <!-- Footer -->
   <footer>
     <div class="container grid grid-footer">
-      <div>
-        <h4>Übungwebseite</h4>
-        <p>Copyright &copy; 2024</p>
-      </div>
       <nav>
-        <ul class="flex">
+        <ul class="flex flex-start">
           <li><a href="index.html">Home</a></li>
           <li><a href="features.html">Features</a></li>
-          <li><a href="docs.html">Download</a></li>
+          <li><a href="download.html">Download</a></li>
         </ul>
       </nav>
-      <div class="socials">
-        <a href="#"><i class="fab fa-github fa-2x"></i></a>
+      <div class="socials flex-end">
+        <a href="#"><i class="fa-brands fa-github fa-2x"></i></a>
         <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
         <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
         <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
       </div>
+      <div id="copyright">
+        <h4>Timdustries</h4>
+        <p>Copyright &copy; 2024</p>
+      </div>
     </div>
-  </footer>
+  </footer> 
 
 </body>
 
