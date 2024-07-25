@@ -49,7 +49,18 @@ a {
   padding: 10px 0;
 }
 
+/* Tablets and under */
+@media (max-width: 768px) {
+
+  .download-main .grid {
+    grid-template-columns: 1fr;
+  }
+ 
+}
+
+/* MOBILE */
+@media (max-width: 500px) {
 
 
-
-
+  
+}
