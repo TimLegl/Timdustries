@@ -619,11 +619,15 @@ footer p {
   font-style: italic;
 }
 
+footer ul {
+  gap: 20px;
+}
+
 footer nav a {
   color: var(--primary-color);
   border-bottom: 2px solid transparent;
   transition: border-bottom 0.5s ease-in-out 0.1s;
-  padding: 1rem;
+  padding: 10px;
 }
 
 footer nav a:hover {
@@ -653,7 +657,7 @@ footer nav a:hover {
 
 #copyright {
   margin-top: 20px;
-  padding-left: 1rem;
+  padding-left: 10px;
   font-size: 1rem;
 }
 
@@ -759,51 +763,6 @@ footer nav a:hover {
   }
 }
 
-
-/* DOWNLOAD */
-.docs-main h3 {
-  margin: 20px 0 0;
-  font-weight: bold;
-}
-
-.docs-main h4 {
-  margin: 0 0 20px;
-  font-weight: bold;
-  color: var(--secondary-color);
-}
-
-/* Selektiert alle Child-Elemente außer das 1. */
-.docs-main h4:not(:first-child) {
-  margin: 20px 0;
-  font-weight: bold;
-  color: var(--secondary-color);
-}
-
-.docs-main .grid {
-  grid-template-columns: 1fr 2fr;
-  align-items: flex-start;
-}
-
-.docs-main nav li{
-  font-size: 17px;
-  padding-bottom: 5px;
-  margin-bottom: 5px;
-  border-bottom: 1px #ccc solid;
-}
-
-.docs-main .card a {
-  font-weight: normal;
-}
-
-.docs-main a:hover {
-  font-weight: bold;
-}
-
-.docs-main p {
-  padding: 10px 0;
-}
-
-
 .fehlermeldungText::placeholder {
   color: var(--error-color);
   font-size: 1.2rem;
@@ -854,109 +813,7 @@ footer nav a:hover {
 }
 
 
-/* FEATURES WEBSEITE */
-/* Features */
-.features-head img,
-.docs-head img {
-  width: 20vw;
-  justify-self: flex-end;
-}
 
-.features-sub-head img {
-  justify-self: flex-end;
-}
-
-.features-main {
-  background-color: var(--primary-color);
-}
-
-.card {
-  gap: 20px;
-  margin: 0;
-}
-
-.features-main .grid > *:first-child {
-  grid-column: 1 / span 3;
-}
-
-.features-main .grid > *:nth-child(2) {
-  grid-column: 1 / span 2;
-}
-
-.features-head h2 {
-  color: var(--secondary-color);
-}
-
-.features-head div {
-  margin: 0 auto;
-}
-
-.features-head div img {
-  width: 20vw;
-}
-
-.features-sub-head svg {
-  font-size: 16vw;
-  color: var(--primary-color);
-}
-
-.features-sub-head h2 {
-  color: var(--primary-color);
-}
-
-.grid-footer {
-  gap: 0;
-}
-
-/* Tablets and under */
-@media (max-width: 768px) {
-
-  .features-head .grid {
-    gap: 0;
-  }
-
-  .features-head .grid,
-  .features-sub-head .grid
-   {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  /* MAIN */
-  .features-main .grid-3 {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .features-main .grid > *:first-child {
-    grid-column: 1 / span 4;
-  }
-
-  .features-main .grid > *:nth-child(4) {
-    grid-column: 1 / span 4;
-  }
-
-  .features-main .grid > *:not(:first-child):not(:nth-child(4)) {
-    grid-column: span 2;
-  }
-   
-}
-
-/* MOBILE */
-@media (max-width: 500px) {
-
-  /* Wichtig, sonst in mobiler Version bei Karten über ganze Breite falsche Schriftgröße */
-  p {
-    font-size: 0.77rem;
-  }
-
-  .features-main .grid-3 {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .features-main .grid > * {
-    grid-column: 1 / span 1 !important;
-  }
-  
-}
 
 
 /* BACKUP */
@@ -1094,9 +951,13 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
     margin-bottom: 20px;
   }
 
+  footer ul {
+    gap: 20px;
+  }
+
   .socials {
     justify-content: flex-start;
-    margin-left: 20px;
+    margin-left: 10px;
   }
 
   #copyright h4 {
@@ -1238,11 +1099,12 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
   /* FOOTER */
   footer ul {
     flex-direction: column;
+    gap: 10px;
   }
 
   footer ul li {
     /* padding: 1rem 0; */
-    padding: 1vw;
+    padding: 1vw 0;
   }
 
   footer .container {
@@ -1267,6 +1129,9 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
     font-size: 0.7rem;
   }
 }
+
+
+
 /* Kleine Bildschirme und Laptops (769px - 1024px)*/
 
 /* Desktops und große Bildschirme (1025px - 1200px)*/
