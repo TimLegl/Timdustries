@@ -1,1 +1,42 @@
+/* DOWNLOAD */
+.download-head h1 {
+  color: var(--secondary-color);
+}
 
+.download-main h3 {
+  margin: 20px 0 0;
+  font-weight: bold;
+}
+
+.download-main h4 {
+  margin: 0 0 20px;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+/* Selektiert alle Child-Elemente außer das 1. */
+.download-main h4:not(:first-child) {
+  margin: 20px 0;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.download-main .grid {
+  grid-template-columns: 1fr 2fr;
+  align-items: flex-start;
+}
+
+.download-main nav li{
+  font-size: 17px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px #ccc solid;
+}
+
+.download-main .card a {
+  font-weight: normal;
+}
+
+.download-main p {
+  padding: 10px 0;
+}
