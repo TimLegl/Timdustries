@@ -365,7 +365,10 @@ input[type="submit"] {
 .examples {
   height: auto;
   background-color: var(--primary-color);
-  padding: 50px 0; /* Hinter den Wert der nicht 0 ist die Pixel Angabe */
+}
+
+.examples .grid {
+  padding: 50px;
 }
 
 .card-collection {
@@ -439,7 +442,6 @@ Mit der TRANSFORM Eigenschaft lassen sich Objekte drehen, skalieren, verzerren, 
 /* CLI - COMMAND LINE INTERFACE*/
 .cli {
   background-color: var(--secondary-color);
-  padding: 50px 0;
 }
 
 .cli h3 {
@@ -450,6 +452,7 @@ Mit der TRANSFORM Eigenschaft lassen sich Objekte drehen, skalieren, verzerren, 
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 40px;
+  padding: 50px;
 }
 
 /* first-child = "img" in diesem Fall */
@@ -967,9 +970,6 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
   footer p {
     font-size: 0.8rem;
   }
-
-
-
 }
 
 @media (max-width: 500px) {
