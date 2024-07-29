@@ -9,6 +9,7 @@ a {
 
 .download-head h1 {
   color: var(--secondary-color);
+  padding-bottom: 1rem;
 }
 
 .download-main h3 {
