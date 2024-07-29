@@ -1,4 +1,4 @@
-/* Utilities (Klassen die auf der ganzen Webseite genutzt werden wie Abstände etc.) */
+/* Utilities (Hilfsklassen die auf der ganzen Webseite genutzt werden können) */
 /* Statt 1100px -> 100% ausprobieren */
 .container {
   max-width: 1100px;
@@ -8,12 +8,12 @@
 }
 
 .card {
-background-color: #fff;
-color: #333;
-border-radius: 10px;
-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-padding: 20px;
-margin: 10px;
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
 }
 
 /* Button Style */
@@ -86,10 +86,11 @@ margin: 10px;
 .text-light {
   color: var(--light-color);
 }
+
 /* Text sizes */
-.lead {
+/* .lead {
   font-size: 20px;
-}
+} */
 
 .sm {
   font-size: 1rem;
@@ -137,7 +138,7 @@ margin: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; 
+  height: 100%;
 }
 
 .grid {
@@ -158,13 +159,7 @@ margin: 10px;
   grid-template-columns: 3fr 1fr;
 }
 
-/* Margin
-rem    = wird mit dem Default Wert der Schriftgröße im Browser multipliziert (16px)
-1rem 0 = margin oben 1rem(16px) | rechts, unten, links 0
-1rem   = alleinstehend ohne einen weiteren Wert heißt es 16px auf jeder seite Abstand
-.my     = y-Achse
-.m      = x-Achse 
-*/
+/* Margin (my = y-Achse / m = x-Achse) */
 .my-1 {
   margin: 1rem 0; 
 }
