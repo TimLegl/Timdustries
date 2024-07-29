@@ -925,6 +925,11 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
   }
 
   /* SHOWCASE */
+
+  .showcase {
+    padding: 2rem 0;
+  }
+
   .showcase-form h2 {
     padding-bottom: 0.5rem;
   }
@@ -944,6 +949,10 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
   }
 
   /* REFERENZEN */
+  .references {
+    padding: 2rem 0;
+  }
+
   .references-content svg {
     font-size: 2rem;
   }
@@ -966,12 +975,13 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
     grid-template-columns: repeat(1, 1fr);
     /* grid-template-rows: 1fr 1fr; */
     gap: 20px;
-    padding: 50px 1rem;
+    padding: 2rem 1rem;
   }
 
   /* CLI */
   .cli .grid {
     grid-template-columns: 1fr;
+    padding: 2rem 1rem;
   }
 
   .cli .grid > *:first-child {
@@ -979,7 +989,21 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
     grid-row: 1 / span 2;
   }
 
+  /* COMPANY */
+  .company {
+    padding: 2rem 1rem;
+  }
+
+  /* CLOUD */
+  .cloud {
+    padding: 2rem 1rem;
+  }
+
   /* SUPPORTED LANGUAGES */
+  .supported-languages {
+    padding: 2rem 0;
+  }
+
   .supported-languages .container {
     padding: 0;
   }
@@ -989,8 +1013,12 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
   }
 
   /* FOOTER */
+  footer {
+    padding: 2rem 0;
+  }
+
   footer ul {
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
   }
 
