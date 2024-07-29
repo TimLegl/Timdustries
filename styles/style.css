@@ -1,3 +1,5 @@
+/* PADDING KARTEN IN MOBILER VERSION */
+
 /* Schriftimport */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
@@ -964,6 +966,7 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
     grid-template-columns: repeat(1, 1fr);
     /* grid-template-rows: 1fr 1fr; */
     gap: 20px;
+    padding: 50px 1rem;
   }
 
   /* CLI */
