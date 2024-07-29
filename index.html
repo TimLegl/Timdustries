@@ -1,40 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Generelles Styling zu spezifischerem Styling -->
-    <link rel="stylesheet" href="./styles/utilities.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    <!-- Font Awesome Kit -->
-    <script src="https://kit.fontawesome.com/b703539e16.js" crossorigin="anonymous"></script>
-    <!-- Font Awesome / lokal eingebunden -->
-    <link rel="stylesheet" href="./assets/css/fontawesome.css">
-    <link rel="stylesheet" href="./assets/css/solid.css">
-    <link rel="stylesheet" href="./assets/css/brands.css">
-    <!-- Eigenes Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-    <link rel="manifest" href="./favicon/site.webmanifest">
-    <script src="./scripts/main.js"></script>
-    <title>Webhosting Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Generelles Styling zu spezifischerem Styling -->
+  <link rel="stylesheet" href="./styles/utilities.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <!-- Font Awesome Kit -->
+  <script src="https://kit.fontawesome.com/b703539e16.js" crossorigin="anonymous"></script>
+  <!-- Font Awesome / lokal eingebunden -->
+  <link rel="stylesheet" href="./assets/css/fontawesome.css">
+  <link rel="stylesheet" href="./assets/css/solid.css">
+  <link rel="stylesheet" href="./assets/css/brands.css">
+  <!-- Eigenes Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/site.webmanifest">
+  <script src="./scripts/main.js"></script>
+  <title>Webhosting Home</title>
 </head>
+
 <body>
 
-  <!-- <div class="navbar">
-    <div class="container flex">
-      <h1 class="logo">Timuki.</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="features.html">Features</a></li>
-          <li><a href="download.html">Docs</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div> -->
-   
   <!-- Obere Navigationsleiste / role = Landmark-Role Orientierungspunkt für Screenreader (blinde) -->
   <section class="navigation" role="navigation">
     <div class="navbar container flex">
@@ -53,48 +42,12 @@
           <ul>
             <li><a href="./index.html">Home</a></li>
             <li><a href="./pages/features.html">Features</a></li>
-            <li><a href="./pages/download.html">Download</a></li>          
+            <li><a href="./pages/download.html">Download</a></li>
           </ul>
         </nav>
       </div>
     </div>
   </section>
-
-  <!-- Showcase
-  <section class="showcase">
-    <div class="container grid">
-      <div class="showcase-text">
-        <h1>Easier Deployment</h1>
-        <p>
-          Deploy web apps of all kinds, from large scale enterprise API's to
-          static websites for individuals. Fill out the form to try a demo of
-          our platform
-        </p>
-        <a href="features.html" class="btn btn-outline">Read More</a>
-      </div>
-      <div class="showcase-form card">
-        <h2>Request a Demo</h2>
-        Netlify und Spamfilter durch honeypot
-        <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
-          <input type="hidden" name="form-name" value="contact">
-          <p class="hidden">
-            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-          </p>
-          <div class="form-control">
-            <input type="text" name="name" placeholder="Name" required>
-            Required gibt eine Meldung an, dass das Feld vor dem Absenden ausgefüllt sein muss
-          </div>
-          <div class="form-control">
-            <input type="text" name="company" placeholder="Company Name" required>
-          </div>
-          <div class="form-control">
-            <input type="text" name="email" placeholder="E-Mail" required>
-          </div>
-          <input type="submit" value="Send" class="btn btn-primary">
-        </form>
-      </div>
-    </div>
-  </section> -->
 
   <!-- Kontaktformular -->
   <section class="showcase" role="showcase">
@@ -102,23 +55,20 @@
       <!-- linkes Element -->
       <div class="text">
         <h2>Webhosting leicht gemacht.</h2>
-        <!-- Läuft bei zu viel Text unter schräges Element -->
-        <p class="lead">Sie möchten eine Webseite mit selbst festgelegter Domain hosten oder Daten sicher Online verwahren, ohne große Kosten und mit wenig Aufwandt?</p>
+        <p class="lead">Sie möchten eine Webseite mit selbst festgelegter Domain hosten oder Daten sicher Online
+          verwahren, ohne große Kosten und mit wenig Aufwandt?</p>
         <p>Schicken Sie mir eine Nachricht und lassen mich Ihnen helfen!</p>
         </p>
       </div>
       <!-- rechtes Element -->
       <div class="showcase-form">
         <h2>Kontakt aufnehmen</h2>
-        <!-- form: Wird genutzt um Input zu sammeln -->
         <!-- novalidate-Attribut entfernt die Standard Fehlermeldungen -->
         <form class="card" action="#" novalidate>
           <input type="text" id="vorname" placeholder="Vorname">
           <input id="nachname" type="text" placeholder="Nachname">
-          <!-- pattern=".+@example\.com" size="30" required -->
           <input id="email" type="email" placeholder="E-Mail">
           <input id="telefon" type="text" placeholder="Telefon">
-          <!-- <input type="submit" placeholder="Senden"> -->
           <button id="absenden-element" type="submit">Senden</button>
         </form>
       </div>
@@ -144,7 +94,7 @@
           <p>250.000 TB</p>
         </div>
         <div>
-          <i class="fa-solid fa-building fa-4x"></i> 
+          <i class="fa-solid fa-building fa-4x"></i>
           <h3>Glückliche Firmen</h3>
           <p>1500</p>
         </div>
@@ -195,120 +145,40 @@
     <div class="container grid">
       <h2>Erfahren Sie mehr über die Firma.</h2>
       <p>
-        In den letzten Jahren habe ich mit Leidenschaft und einer Prise Wahnsinn daran gearbeitet, kleine und mittelständische Unternehmen durch den Technologie-Dschungel zu führen.
+        In den letzten Jahren habe ich mit Leidenschaft und einer Prise Wahnsinn daran gearbeitet, kleine und
+        mittelständische Unternehmen durch den Technologie-Dschungel zu führen.
       </p>
       <p>
         Vom ersten Prototyp bis zur fertigen Website inklusive Hosting - wenn es blinkt und piept, bin ich zur Stelle.
       </p>
       <p>
-        Derzeit stehe ich an einem spannenden Wendepunkt: Timdustries wächst! Neue Projekte, spannende Herausforderungen und die Teilnahme am gesamten Projektzyklus – die Zukunft sieht rosig aus.
+        Derzeit stehe ich an einem spannenden Wendepunkt: Timdustries wächst! Neue Projekte, spannende Herausforderungen
+        und die Teilnahme am gesamten Projektzyklus – die Zukunft sieht rosig aus.
       </p>
-      <p>Deshalb suche ich ab sofort Verstärkung für mein 1-Mann-Team. Schicken Sie mir einfach eine E-Mail mit Ihrem Lebenslauf!</p>
-        <!-- 0.01 Outline -->
+      <p>Deshalb suche ich ab sofort Verstärkung für mein 1-Mann-Team. Schicken Sie mir einfach eine E-Mail mit Ihrem
+        Lebenslauf!</p>
+      <!-- 0.01 Outline -->
       <img id="company-logo" src="./icons/icon-0.1-black.svg" alt="company-logo">
       <button><a href="#LINK">Jetzt bewerben</a></button>
     </div>
   </section>
 
-    <!-- Cloud Hosting
-    <section class="cloud">
-      <div class="container grid text-center">
-        <h2>Extreme Cloud Hosting</h2>
-        <p>Most efficient Hosting, you've ever seen. Incomparable speed.</p>
-        <img src="./images/cloud.png" alt="">
-        <button><a href="#LINK">Mehr erfahren</a></button>
-      </div>
-    </section>
-     -->
-
-    <!-- Cloud Hosting PNG
-    <section class="cloud">
-      <div class="container grid text-center">
-        <h2>Extreme Cloud Hosting</h2>
-        <p>Most efficient Hosting, you've ever seen. Incomparable speed.</p>
-        <img src="./images/cloud-hosting-selfmade.png" alt="">
-        <button><a href="#LINK">Mehr erfahren</a></button>
-      </div>
-    </section>
-    -->
-
-    <!-- Cloud Hosting -->
-    <section class="cloud">
-      <div class="container grid">
-        <h2>Gestaltung von Logos und Icons.</h2>
-        <p>
-          Zu einer neuen Website gehören auch schicke neue Icons, Logos und Formen. Wer will sich nicht von der Masse abheben?
-        </p>
-        <p>
-          Schicken Sie mir eine Anfrage mit Ihrer Idee und ich helfe Ihnen, skalierbare Dateien für alle Geräte zu erstellen, egal ob Desktop, Mobile oder Tablet!
-        </p>
-        <img src="./images/cloud-hosting-selfmade-white.svg" alt="">
-        <button><a href="#LINK">Idee Realität werden lassen</a></button>
-      </div>
-    </section>
-
-  <!-- 
-  Cloud Hosting
+  <!-- Cloud Hosting -->
   <section class="cloud">
-    <div class="container grid text-center">
-      <h2>Extreme Cloud Hosting</h2>
-      <p>Most efficient Hosting, you've ever seen. Incomparable speed.</p>
-      <img src="./icons/icon-0.1.svg" alt="">
-      <button><a href="#LINK">0.1</a></button>
+    <div class="container grid">
+      <h2>Gestaltung von Logos und Icons.</h2>
+      <p>
+        Zu einer neuen Website gehören auch schicke neue Icons, Logos und Formen. Wer will sich nicht von der Masse
+        abheben?
+      </p>
+      <p>
+        Schicken Sie mir eine Anfrage mit Ihrer Idee und ich helfe Ihnen, skalierbare Dateien für alle Geräte zu
+        erstellen, egal ob Desktop, Mobile oder Tablet!
+      </p>
+      <img src="./images/cloud-hosting-selfmade-white.svg" alt="">
+      <button><a href="#LINK">Idee Realität werden lassen</a></button>
     </div>
   </section>
-
-  Cloud Hosting
-  <section class="cloud">
-    <div class="container grid text-center">
-      <h2>Extreme Cloud Hosting</h2>
-      <p>Most efficient Hosting, you've ever seen. Incomparable speed.</p>
-      <img src="./icons/my-icon-refined.svg" alt="">
-      <button><a href="#LINK">Mehr erfahren</a></button>
-    </div>
-  </section>  
-    
-  Cloud Hosting TEST 0.03 Outline
-  <section class="cloud">
-    <div class="container grid text-center">
-      <h2>Extreme Cloud Hosting</h2>
-      <p>Most efficient Hosting, you've ever seen. Incomparable speed.</p>
-      <img src="./icons/icon-0.03.svg" alt="">
-      <button><a href="#LINK">0.03</a></button>
-    </div>
-  </section>
-
-  
-  Cloud Hosting TEST 0.04 Outline
-  <section class="cloud">
-    <div class="container grid text-center">
-      <h2>Extreme Cloud Hosting</h2>
-      <p>Most efficient Hosting, you've ever seen. Incomparable speed.</p>
-      <img src="./icons/icon-0.04.svg" alt="">
-      <button><a href="#LINK">0.04</a></button>
-    </div>
-  </section>
-
-  Cloud Hosting TEST 0.05 Outline
-  <section class="cloud">
-    <div class="container grid text-center">
-      <h2>Extreme Cloud Hosting</h2>
-      <p>Most efficient Hosting, you've ever seen. Incomparable speed.</p>
-      <img src="./icons/icon-0.05.svg" alt="">
-      <button><a href="#LINK">0.05</a></button>
-    </div>
-  </section>
-
-  Cloud Hosting TEST 0.06 Outline
-  <section class="cloud">
-    <div class="container grid text-center">
-      <h2>Extreme Cloud Hosting</h2>
-      <p>Most efficient Hosting, you've ever seen. Incomparable speed.</p>
-      <img src="./icons/icon-0.06.svg" alt="">
-      <button><a href="#LINK">0.06</a></button>
-    </div>
-  </section>
-  -->
 
   <!-- Unterstützte Programmiersprachen -->
   <section class="supported-languages" role="supported-languages">
@@ -378,36 +248,8 @@
         <p>Copyright &copy; 2024</p>
       </div>
     </div>
-  </footer>  
-
-  <!-- 
-  <section class="references" role="references">
-    <div class="container text-center">
-      <h3 class="references-heading text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae veniam eos sequi quam, natus voluptate saepe eius aliquam repellat inventore!</h3>
-      <div class="grid grid-3">
-        <div>
-        i oder span für Icons / Direktzugriff auf Font Awesome Bibliothek über Link im Meta Tag
-          <i class="fa-solid fa-server fa-3x"></i>
-          <h3>High End Server</h3>
-          <p>120</p>
-        </div>
-        <div>
-       fa-solid: Icon Art | fa-database: Icon Name | fa-3x: 3-fach vergrößert
-          <i class="fa-solid fa-database fa-3x"></i>
-          <h3>Uploaded Files</h3>
-          <p>250.000 TB</p>
-        </div>
-        <div>
-          <i class="fa-solid fa-building fa-3x"></i> 
-          <h3>Happy Companies</h3>
-          <p>1500</p>
-        </div>
-      </div>
-    </div>
-  </section>
--->
-
-  <!-- NETLIFY ZWECK PRÜFEN -->
+  </footer>
 
 </body>
+
 </html>
