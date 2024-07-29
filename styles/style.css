@@ -1,5 +1,3 @@
-/* PADDING KARTEN IN MOBILER VERSION */
-
 /* Schriftimport */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
@@ -86,19 +84,6 @@ button {
   font-size: 1.2rem;
 }
 
-/* Button Variante 2 über input-type
-input[type="submit"] {
-  color: var(--light-color);
-  margin-top: 10px;
-  width: auto;
-  padding: 10px;
-  background-color: var(--secondary-color);
-  border-radius: 5px;
-  border: none;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-} */
-
-
 button:hover {
   /* Der Transformations-Effekt tritt ein, sobald über ein "button"-Element gehovert wird.
   scale(0.95) wird verwendet um den Button auf 95% der Originalgröße zu reduzieren.
@@ -163,8 +148,6 @@ button:hover {
 
 /* SHOWCASE - KONTAKTFORMULAR */
 .showcase {
-  /* Bei fester Höhe liegt Formular beim verkleinern zu Nah an der Überschrift im Modul darunter */
-  /* height: 400px; */
   position: relative;
   background-color: var(--primary-color);
   padding: 50px 0;
@@ -207,7 +190,6 @@ button:hover {
 
 .showcase .grid {
   overflow: visible;
-  /* grid-template-columns: 55% 45%; */
   gap: 3rem;
 }
 
@@ -248,10 +230,10 @@ input:-webkit-autofill {
   padding: 20px;
   border-radius: 10px;
   position: relative;
-  z-index: 1; /* Positioniert Formular vor dem Hintergrund */
+  z-index: 1; /* Positioniert Formular im Vordergrund */
   background-color: var(--light-color);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  min-width: 122px; /* Sonst rutscht "Node" bei Mobiler Version in eine Zeile mit nachfolger  */
+  min-width: 122px;
 }
 
 input:focus {
@@ -453,10 +435,10 @@ Mit der TRANSFORM Eigenschaft lassen sich Objekte drehen, skalieren, verzerren, 
   grid-template-columns: 1fr;
 }
 
-/* Korrigieren */
 .company img {
   width: 80%;
   margin: auto;
+  padding: 3rem;
 }
 
 .rotieren {
@@ -611,14 +593,6 @@ footer nav a:hover {
 
 /* UTILITIES */
 /* Rahmen */
-.container {
-  max-width: 1100px;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  /* Abstand zu Seitenrändern */
-  padding: 0 50px;
-}
 
 .flex {
   display: flex;
@@ -657,7 +631,6 @@ footer nav a:hover {
   grid-template-columns: 1fr 1fr;
 }
 
-/* Zentrieren von Text und Elementen (Siehe reference) */
 .text-center {
   text-align: center;
 }
@@ -706,11 +679,11 @@ footer nav a:hover {
   }
 }
 
+/* EIGENE FORMULAR FEHLERMELDUNGEN */
 .fehlermeldungText::placeholder {
   color: var(--error-color);
   font-size: 1.2rem;
 }
-
 
 .hinweisTextStyle p {
   color: var(--error-color);
@@ -754,19 +727,6 @@ footer nav a:hover {
   border-bottom: 9px solid var(--error-color);
   border-left: 9px solid transparent;
 }
-
-/*
-Meist genutzte Bildschirmauflösungen Weltweit Desktop:
-  1920×1080, 1366×768, 1536×864, 1280×720, 1440×900
-  Marktanteil: 44.95%
-*/
-
-
-/* Mobile (320px = Schmalste Bildschirmbreite iPhone 5 / Rest zwischen 375 - 414)
-Meist genutzte Bildschirmauflösungen Weltweit Mobile:
-	360×800, 390×844, 414×896, 375×667, 412×732
-  Marktanteil: 52.81%
-*/
 
 /* MEDIA QUERIES VON ALLGEMEIN NACH SPEZIFISCHER AUFBAUEN, DA BEISPIELSWEISE DIE REGELN VON "max-width: 768px" AUCH AUF "max-width: 500px" ANGEWANDT WERDEN, DA ALLES UNTER 768 AUCH 500 BEINHALTET */
 
@@ -960,12 +920,11 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
   .references .grid {
     gap: 20px;
   }
-    
 
   #wave-form {
     /* Wichtig damit ganze Form sichtbar */
-    /* background-size: contain; */
     background-size: cover;
+    /* background-size: contain; */
     /* Muss min. 50px, sonst wird teils abgeschnitten */
     height: 50px;
   }
@@ -973,7 +932,6 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
   /* EXAMPLES */
   .examples .grid {
     grid-template-columns: repeat(1, 1fr);
-    /* grid-template-rows: 1fr 1fr; */
     gap: 20px;
     padding: 2rem 1rem;
   }
@@ -994,9 +952,17 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
     padding: 2rem 1rem;
   }
 
+  .company img {
+    padding: 1rem 0;
+  }
+
   /* CLOUD */
   .cloud {
     padding: 2rem 1rem;
+  }
+
+  .cloud img {
+    padding: 1rem 0;
   }
 
   /* SUPPORTED LANGUAGES */
@@ -1017,13 +983,16 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
     padding: 2rem 0;
   }
 
+  .grid-footer {
+    gap: 0;
+  }
+
   footer ul {
     flex-direction: row;
     gap: 10px;
   }
 
   footer ul li {
-    /* padding: 1rem 0; */
     padding: 1vw 0;
   }
 
@@ -1033,7 +1002,7 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
 
   .socials {
     gap: 20px;
-    grid-column: 1 / 3; /* Nimmt so die ganze Breite ein von Spalte 1 - 3 (Also Spalte 1 und 2) */
+    grid-column: 1 / 3; /* Nimmt ganze Breite ein: Spalte 1 bis 3 (Entspricht Spalte 1 und 2) */
   }
 
   .socials svg {
