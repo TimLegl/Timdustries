@@ -1,19 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
+/* Schriftimport */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-/* OVERFLOW WEGEN FLEX-DIREKTION UND GRÖßE DER ELEMENTE IN NAVBAR
-- ÄNDERN AUF FLEX-DIRECTION COLUMN IN MEDIA QUERIES
-- SCHRIFTGRÖßE KLEINER
-- SELBE BEI FOOTER
-- BEI EXAMPLES ABSTAND ZWISCHEN ELEMENTEN VERTIKAL
-- UMBRUCH BEI BILDERN NEBENEINANDERN MITTELS GRID ANDERS
-- UNTERSTÜTZTE SPRACHEN KLEINER/2 nebeneinandner
-
-*/
 /* HOME WEBSEITE */
 :root {
   --primary-color: #FFBB0D;
   --secondary-color: #2F2D2E;
-  /* --dark-color: #000000; */
   --light-color: #ecf0f1;
   --success-color: #0BD45E;
   --error-color: #C91D1D;
@@ -24,33 +15,18 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif; /*Für Input Felder angelegt, prüfen ob nötig*/
+  font-family: Nunito, sans-serif; 
 }
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.6;
   background-color: var(--light-color);
-  /* Wichtig für Optik bei Zoom */
+  /* Sieht mit max-width beim rauszoomen besser aus */
   max-width: 1500px;
   margin: 0 auto;
 }
 
-/* Superior Elements */
-a {
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-p {
-  font-size: 1.2rem;
-}
-
-ul {
-  list-style: none;
-}
-
+/* Generelles Elemente Styling / Superior Elements */
 h1 {
   font-size: 2rem;
   color: var(--primary-color);
@@ -71,19 +47,22 @@ h4 {
   color: var(--primary-color);
 }
 
+a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+ul {
+  list-style: none;
+}
+
 img {
   width: 100%;
-}
-
-code {
-  background: #333;
-  color: #fff;
-  padding: 10px;
-  display: block;
-}
-
-code {
-  font-family: monospace;
 }
 
 /* Button Variante 1 */
@@ -97,24 +76,33 @@ button {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   /* transition legt einen Übergangseffekt fest.
   Hier wird festgelegt, dass der Übergang über die transform-Eigenschaft erfolgt.
-  Die DAUER des Übergangs wird auf 0,5 Sekunden festgelegt.
-  "ease" bedeutet, dass der Übergang sanft startet und endet.
+  Die Dauer des Übergangs wird auf 0,5 Sekunden festgelegt.
+  "ease-in-out" bedeutet einen langsamen Start und ein langsames Ende.
+  0.1s am Ende definiert die Verzögerung der Animation, sobald Sie durch hover ausgelöst wird
   */
   transition: transform 0.5s ease-in-out 0.1s;
   font-size: 1.2rem;
 }
 
+/* Button Variante 2 über input-type
+input[type="submit"] {
+  color: var(--light-color);
+  margin-top: 10px;
+  width: auto;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+} */
+
+
 button:hover {
-  /* Der Transformations Effekt tritt ein, sobald über ein "button"-Element gehovert wird.
+  /* Der Transformations-Effekt tritt ein, sobald über ein "button"-Element gehovert wird.
   scale(0.95) wird verwendet um den Button auf 95% der Originalgröße zu reduzieren.
-   */
+  */
   transform: scale(0.95);
 }
-
-
-/* a.button {
-  color: var(--secondary-color);
-} */
 
 /* NAVBAR */
 .navigation {
@@ -137,12 +125,12 @@ button:hover {
   padding: 10px;
   margin: 0 5px;
   color: var(--primary-color);
-  border-bottom: 2px solid transparent; /* Setze eine transparente untere Grenze */
-  transition: border-bottom 0.5s ease-in-out 0.1s; /* Definiere den Übergang für die untere Grenze */
+  border-bottom: 2px solid transparent; /* Rahmen unten ohne hover auf transparent setzen */
+  transition: border-bottom 0.5s ease-in-out 0.1s; /* Rahmen unten Übergang */
 }
 
 .navbar a:hover {
-  border-bottom: 2px solid var(--primary-color); /* Ändere die untere Grenze bei Hover */
+  border-bottom: 2px solid var(--primary-color); /* Rahmen unten Syle Änderung bei hover */
 }
 
 .navbar .flex{
@@ -205,8 +193,6 @@ button:hover {
 }
 */
 
-
-
 .showcase .text {
   animation: slideInFromLeft 1s ease-in;
 }
@@ -245,17 +231,16 @@ input:autofill {
 input:-webkit-autofill {
   color: red !important;
 }
- */
+*/
 
 .showcase-form input:focus {
-  outline: none; /*Entfernt den Rahmen wenn man auf ein Input Feld klickt*/
+  outline: none; /* Entfernt Rahmen beim Klicken auf Input Feld */
 }
 
 .showcase button {
   margin-top: 20px;
 }
 
-/* Von "form" zu ".card" geändert um das Element bei der Sektion "examples" wieder zu verwenden*/
 .card {
   border: none;
   padding: 20px;
@@ -284,38 +269,14 @@ input[type="text"] {
   background-color: transparent;
 }
 
-/* Button Variante 2
-input[type="submit"] {
-  color: var(--light-color);
-  margin-top: 10px;
-  width: auto;
-  padding: 10px;
-  background-color: var(--secondary-color);
-  border-radius: 5px;
-  border: none;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-} */
-
 /* REFERENCES */
 .references {
   padding: 50px 0;
-  /* Keine feste Höhe, sonst rutschen Bilder und Text beim verkleinern aus dem Container */
-  /* height: 500px; */
   background-color: var(--secondary-color);
-  position: relative;  /* Macht Elemente sichtbar, sonst werden sie von dem abgeschrägten Element überdeckt */
+  position: relative;  /* Macht Elemente sichtbar, sonst werden sie von der Wellenform überdeckt */
+  /* Keine feste Höhe, sonst rutschen Bilder und Text beim verkleinern aus dem Container
+  height: 500px; */
 }
-
-.references {
-  padding: 0 0 50px 0;
-}
-
-/* #wave-form {
-  margin: 0 0 -10px 0;
-  padding: 0;
-  position: relative;
-  width: 100%;
-  background-color: var(--primary-color);
-} */
 
 #wave-form {
   background: url(./../images/wave-black.svg);
@@ -324,26 +285,12 @@ input[type="submit"] {
   background-color: var(--primary-color);
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: cover; /* Cover für Desktop, contain für Mobile*/
+  background-size: cover; /* Cover für Desktop, contain für Mobile */
   position: relative;
   /* border: none; */
   /* outline: none; */
-  margin-bottom: -4px; /* Verhindert schmalen Rahmen zwischen Modulen */
+  /* margin-bottom: -4px; Verhindert schmalen Rahmen zwischen Modulen */
   height: 140px; /* Macht Form sichtbar */
-}
-
-.references-content svg {
-  padding-bottom: 20px;
-  color: var(--light-color);
-  font-size: 4rem;
-}
-
-.references p {
-  color: var(--light-color);
-}
-
-.references-content {
-  animation: slideInFromBottom 1s ease-in;
 }
 
 .references .grid {
@@ -360,10 +307,22 @@ input[type="submit"] {
   color: var(--primary-color);
 }
 
+.references p {
+  color: var(--light-color);
+}
+
+.references-content {
+  animation: slideInFromBottom 1s ease-in;
+}
+
+.references-content svg {
+  padding-bottom: 20px;
+  color: var(--light-color);
+  font-size: 4rem;
+}
 
 /* EXAMPLES */
 .examples {
-  height: auto;
   background-color: var(--primary-color);
 }
 
@@ -403,7 +362,7 @@ transition-delay
 Die transition-Eigenschaft wird genutzt um den Übergangseffekt eines Elements zwischen 2 oder mehr Zuständen zu definieren.
 Man muss dabei den Start- und Endzustand festlegen. (Hier vor dem Hover und nach dem Hover)
 
-ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default)
+ease - specifies a transition effect with a slow start, then fast, then end slowly (default)
 linear - specifies a transition effect with the same speed from start to end
 ease-in - specifies a transition effect with a slow start
 ease-out - specifies a transition effect with a slow end
@@ -477,7 +436,6 @@ Mit der TRANSFORM Eigenschaft lassen sich Objekte drehen, skalieren, verzerren, 
   transition: transform 0.5s ease-in-out 0.1s;
 }
 
-
 /* COMPANY */
 .company {
   background-color: var(--primary-color);
@@ -486,6 +444,7 @@ Mit der TRANSFORM Eigenschaft lassen sich Objekte drehen, skalieren, verzerren, 
 
 .company h2 {
   color: var(--secondary-color);
+  padding-bottom: 0;
 }
 
 .company .grid {
@@ -498,43 +457,22 @@ Mit der TRANSFORM Eigenschaft lassen sich Objekte drehen, skalieren, verzerren, 
   margin: auto;
 }
 
-/* cubic-bezier(P0, P1, P2, P3)
-DEFAULT: cubic-bezier(0, 0, 1, 1) = linear
-P0 is (0, 0) and represents the initial time and the initial state.
-P3 is (1, 1) and represents the final time and the final state. */
 .rotieren {
   animation: rotieren 3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 /* 360 Grad Drehung Animation */
 @keyframes rotieren {
+  /* Startzustand */
   from {
     transform: rotate(0deg);
   }
+  /* Endzustand */
   to {
     transform: rotate(360deg);
   }
 }
 
-
-/*
-.company img:hover {
-  transition: none;
-  animation: rotate 5s linear;
-}
-
-Animationen lassen sich mittels CSS animation-Eigenschaft und @keyframes erstellen, ohne JavaScript zu nutzen
-@keyframes rotate {
-  from {
-    Startzustand
-    transform: rotate(0deg);
-  }
-  to {
-    Endzustand
-    transform: rotate(360deg);
-  }
-}
-*/
 .company a {
   color: var(--primary-color);
 }
@@ -546,6 +484,7 @@ Animationen lassen sich mittels CSS animation-Eigenschaft und @keyframes erstell
 
 .cloud h2 {
   color: var(--primary-color);
+  padding-bottom: 0;
 }
 
 .cloud p {
@@ -701,8 +640,7 @@ footer nav a:hover {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Wenn nebeneinander passt wiederholend / 2 x 1fr (Fraktion = gleichmäßige Aufteilung in Fraktionen ) */
-  /* grid-template-columns: 1fr 1fr; alternativ ohne repeat */
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .grid-3 {
@@ -815,55 +753,6 @@ footer nav a:hover {
   border-left: 9px solid transparent;
 }
 
-
-
-
-
-/* BACKUP */
-/* Tablets and under
-@media (max-width: 768px) {
-
-  .features-head .grid {
-    gap: 0;
-  }
-
-  .features-head .grid,
-  .features-sub-head .grid
-   {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .features-main .grid-3 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-    
-  .features-main .grid > *:nth-child(2) {
-    grid-column: auto ;
-  } 
-
-  .features-main .grid > *:nth-child(4) {
-    grid-column: 1 / span 3;
-  }
-
-  .features-main .grid > *:nth-child(5) {
-    grid-column: 1 / span 2;
-  }
-
-}
-
-@media (max-width: 500px) {
-
-  .features-main .grid-3 {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  
-}
-*/
-
-
-
-/* --------------------------------------------------------------- */
 /*
 Meist genutzte Bildschirmauflösungen Weltweit Desktop:
   1920×1080, 1366×768, 1536×864, 1280×720, 1440×900
@@ -1130,15 +1019,11 @@ Meist genutzte Bildschirmauflösungen Weltweit Mobile:
   }
 }
 
-
-
 /* 
 Kleine Bildschirme und Laptops (769px - 1024px)
 Desktops und große Bildschirme (1025px - 1200px)
 Extra Große Bildschirme (1201px und mehr)
-*/
 
-/* 
 Meist genutzte Bildschirmauflösungen Weltweit Tablet:
 768×1024, 810×1080, 1280×800, 1024×768, 1920×1080
 Marktanteil: 1.83%
