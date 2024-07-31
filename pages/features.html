@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
   <meta charset="UTF-8" />
@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Font Awesome Kit -->
   <script src="https://kit.fontawesome.com/b703539e16.js" crossorigin="anonymous"></script>
-  <!-- Erst Allgemeine Styles einbinden, dann spezifischere -->
   <link rel="stylesheet" href="./../styles/utilities.css" />
   <link rel="stylesheet" href="./../styles/style.css" />
   <link rel="stylesheet" href="./../styles/features.css">
@@ -21,18 +20,15 @@
 
 <body>
 
-
-  
-  <!-- Navbar -->
-  <section class="navigation" role="navigation">
-    <div class="navbar container flex">
+  <section class="navigation-outer" role="navigation">
+    <div class="navigation-inner container flex">
       <div class="logo">
         <div class="logo-left">
           <i>
             <img id="selfmade-icon" src="../icons/icon-0.1.svg" alt="company logo first letter">
           </i>
         </div>
-        <div class="logo-right">
+        <div class="logo-text">
           <h1>imdustries</h1>
         </div>
       </div>
@@ -41,7 +37,7 @@
           <ul>
             <li><a href="./../index.html">Home</a></li>
             <li><a href="./features.html">Features</a></li>
-            <li><a href="./download.html">Download</a></li>          
+            <li><a href="./download.html">Download</a></li>
           </ul>
         </nav>
       </div>
@@ -49,11 +45,12 @@
   </section>
 
   <!-- Head -->
-  <section class="features-head bg-primary py-3">
+  <section class="features-head bg-primary">
     <div class="container grid">
       <div>
         <h2>Features.</h2>
-        <p>Erkunden Sie all unsere Features, mich von der Konkurrenz abheben. Sollten Sie fragen haben, nehmen Sie gerne jederzeit Kontakt für die Home-Seite mit dem Formular mit mir auf.</p>
+        <p>Erkunden Sie alle Features, die mich von der Konkurrenz abheben. Sollten Sie fragen haben, nehmen Sie gerne
+          jederzeit Kontakt über die Home-Seite mit dem Formular mit mir auf.</p>
       </div>
       <div>
         <img src="./../images/schnurrbart.png" alt="Schnurrbart">
@@ -62,14 +59,19 @@
   </section>
 
   <!-- Sub head -->
-  <!-- bg-light entfernt -->
-  <section class="features-sub-head bg-secondary py-3">
+  <section class="features-sub-head bg-secondary">
     <div class="container grid grid-4">
 
       <div>
         <h2>Serverlandschaft.</h2>
         <p class="text-primary">
-          Das Speichern von Daten auf unseren Servern ist sowohl sicher als auch einfach. Unsere Server nutzen modernste Verschlüsselungstechnologien, um sicherzustellen, dass Ihre Daten vor unbefugtem Zugriff geschützt sind. Durch kontinuierliche Sicherheitsupdates und regelmäßige Überprüfungen gewährleisten wir den Schutz Ihrer Informationen rund um die Uhr. Der Prozess der Datenspeicherung ist benutzerfreundlich gestaltet, sodass Sie mit wenigen Klicks Ihre Daten hochladen und verwalten können. Mit automatisierten Backups und redundanten Systemen bieten wir zusätzliche Sicherheit und Zuverlässigkeit. Vertrauen Sie auf unsere Infrastruktur, um Ihre Daten sicher und unkompliziert zu speichern.
+          Das Speichern von Daten auf unseren Servern ist sowohl sicher als auch einfach. Unsere Server nutzen modernste
+          Verschlüsselungstechnologien, um sicherzustellen, dass Ihre Daten vor unbefugtem Zugriff geschützt sind. Durch
+          kontinuierliche Sicherheitsupdates und regelmäßige Überprüfungen gewährleisten wir den Schutz Ihrer
+          Informationen rund um die Uhr. Der Prozess der Datenspeicherung ist benutzerfreundlich gestaltet, sodass Sie
+          mit wenigen Klicks Ihre Daten hochladen und verwalten können. Mit automatisierten Backups und redundanten
+          Systemen bieten wir zusätzliche Sicherheit und Zuverlässigkeit. Vertrauen Sie auf unsere Infrastruktur, um
+          Ihre Daten sicher und unkompliziert zu speichern.
         </p>
       </div>
       <div class="flex">
@@ -78,44 +80,49 @@
     </div>
   </section>
 
-  <!-- Wenn nur eine der .card Klassen einen zu langen Test beinhalten, wird die gesamte Zeile höher skaliert -->
-  <!-- my-2 entfernt -->
-  <section class="features-main py-3">
+  <section class="features-main">
     <div class="container grid grid-3">
       <div class="card flex">
-        <i class="fas fa-server fa-3x"></i>
+        <i class="fa-solid fa-check fa-3x"></i>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis dolorum quod sequi! Fugit ipsam illum quia minima, rerum distinctio eveniet non tempora eius perspiciatis praesentium cupiditate eaque, eligendi facere? Repellat voluptas aliquam aut laudantium, quae in eum laboriosam, soluta minus quas adipisci officia autem ipsam dolorem laborum vero id quod obcaecati optio pariatur aliquid.
+          <strong>Verbesserte Ausfallsicherheit und Redundanz</strong>: Eine Serverlandschaft mit 10 Servern bietet
+          erhebliche Vorteile in Bezug auf Ausfallsicherheit und Redundanz. Durch die Verteilung von Daten und
+          Anwendungen auf mehrere Server wird das Risiko eines vollständigen Systemausfalls minimiert. Fällt ein Server
+          aus, übernehmen andere Server seine Aufgaben, wodurch die Betriebszeit maximiert und die Verfügbarkeit der
+          Dienste sichergestellt wird.
         </p>
       </div>
       <div class="card flex">
-        <i class="fas fa-server fa-3x"></i>
+        <i class="fa-solid fa-check fa-3x"></i>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea similique nobis, saepe labore vero incidunt explicabo neque quae hic maiores corporis totam ipsa id libero.
+          <strong>Kosteneffizienz</strong>: Durch die Nutzung von Virtualisierung und Cloud-Technologien können
+          Betriebskosten gesenkt und Ressourcen effizienter genutzt werden, wodurch nur für tatsächlich genutzte
+          Kapazitäten bezahlt wird, was langfristig Einsparungen ermöglicht.
         </p>
       </div>
       <div class="card flex">
-        <i class="fas fa-server fa-3x"></i>
+        <i class="fa-solid fa-check fa-3x"></i>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          <strong>Hohe Verfügbarkeit</strong>: Redundanz garantiert minimalen Ausfall und kontinuierlichen Betrieb.
         </p>
       </div>
       <div class="card flex">
-        <i class="fas fa-server fa-3x"></i>
+        <i class="fa-solid fa-check fa-3x"></i>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing.
+          <strong>Sicherheit</strong>: Mehrschichtige Sicherheitsmaßnahmen schützen Daten und Anwendungen effektiv.
         </p>
       </div>
       <div class="card flex">
-        <i class="fas fa-server fa-3x"></i>
+        <i class="fa-solid fa-check fa-3x"></i>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          <strong>Skalierbarkeit</strong>: Dynamische Anpassung an steigende Lasten und Benutzerzahlen.
         </p>
       </div>
       <div class="card flex">
-        <i class="fas fa-server fa-3x"></i>
+        <i class="fa-solid fa-check fa-3x"></i>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, esse.
+          <strong>Leistungsfähigkeit</strong>: Optimierte Ressourcenverteilung maximiert Rechenleistung und
+          Speicherkapazität.
         </p>
       </div>
     </div>
@@ -127,70 +134,22 @@
       <nav>
         <ul class="flex flex-start">
           <li><a href="./../index.html">Home</a></li>
-          <li><a href="features.html">Features</a></li>
-          <li><a href="download.html">Download</a></li>
+          <li><a href="./features.html">Features</a></li>
+          <li><a href="./download.html">Download</a></li>
         </ul>
       </nav>
       <div class="socials flex-end">
-        <a href="https://github.com/TimLegl/Timdustries"><i class="fa-brands fa-github fa-2x"></i></a>
-        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="https://timlegl.github.io/Timdustries/"><i class="fa-brands fa-github fa-2x"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f fa-2x"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+        <a href="https://www.linkedin.com/in/tim-l-9a017a250"><i class="fa-brands fa-linkedin-in fa-2x"></i></a>
       </div>
       <div id="copyright">
         <h4>Timdustries</h4>
         <p>Copyright &copy; 2024</p>
       </div>
     </div>
-  </footer>  
-
-  <!-- Footer -->
-  <!-- <footer>
-    <div class="container grid grid-footer">
-      <div>
-        <h4>Übungwebseite</h4>
-        <p>Copyright &copy; 2024</p>
-      </div>
-      <nav>
-        <ul class="flex">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="features.html">Features</a></li>
-          <li><a href="download.html">Download</a></li>
-        </ul>
-      </nav>
-      <div class="socials">
-        <a href="#"><i class="fab fa-github fa-2x"></i></a>
-        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-      </div>
-    </div>
-  </footer>   -->
-
-  <!-- Footer
-  <footer class="bg-dark py-5">
-    <div class="container grid grid-3">
-      <div>
-        <h2>Loruki
-        </h2>
-        <p>Copyright &copy; 2020</p>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="features.html">Features</a></li>
-          <li><a href="download.html">Docs</a></li>
-        </ul>
-      </nav>      
-      <div class="social">
-        <a href="#"><i class="fab fa-github fa-2x"></i></a>
-        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-      </div>
-    </div>
   </footer>
-   -->
 
 </body>
 
