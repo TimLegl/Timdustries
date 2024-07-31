@@ -1,21 +1,22 @@
-/* Utilities (Hilfsklassen die auf der ganzen Webseite genutzt werden können) */
-/* Statt 1100px -> 100% ausprobieren */
+/* UTILITIES (Hilfsklassen die auf der ganzen Webseite genutzt werden können) */
 .container {
-  max-width: 1100px;
+  /* max-width: 1100px; */
   margin: 0 auto;
   padding: 0 50px;
 }
 
 .card {
-  background-color: #fff;
+  background-color: var(--light-color);
   color: #333;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  margin: 10px;
+  min-width: 122px;
+  /* Positioniert Formular im Vordergrund bei schrägem Balken */
+  /* position: relative; */
 }
 
-/* Button Style */
+/* BUTTON */
 .btn {
   display: inline-block;
   padding: 10px 30px;
@@ -35,7 +36,7 @@
   transform: scale(0.98);
 }
 
-/* Background & colored buttons */
+/* HINTERGRUND & BUTTONS */
 .bg-primary,
 .btn-primary {
   background-color: var(--primary-color);
@@ -69,7 +70,7 @@
   color: #fff;
 }
 
-/* Text colors */
+/* TEXTFARBEN */
 .text-primary {
   color: var(--primary-color);
 }
@@ -86,7 +87,7 @@
   color: var(--light-color);
 }
 
-/* Text sizes */
+/* TEXTGRÖßEN */
 .lead {
   padding-bottom: 1rem;
 }
@@ -107,12 +108,12 @@
   font-size: 4rem;
 }
 
+/* TEXTPOSITIONEN */
 .text-center {
   text-align: center;
-  
 }
 
-/* Alert */
+/* MELDUNGEN */
 .alert {
   background-color: var(--light-color);
   padding: 10px 20px;
@@ -133,6 +134,7 @@
   color: #fff;
 }
 
+/* FLEX */
 .flex {
   display: flex;
   justify-content: center;
@@ -140,6 +142,20 @@
   height: 100%;
 }
 
+.flex-start {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -158,7 +174,11 @@
   grid-template-columns: 3fr 1fr;
 }
 
-/* Margin (my = y-Achse / m = x-Achse) */
+.grid-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+/* MARGIN (my = y-Achse / m = x-Achse) */
 .my-1 {
   margin: 1rem 0; 
 }
@@ -199,7 +219,7 @@
   margin: 4rem;
 }
 
-/* Padding */
+/* PADDING */
 .py-1 {
   padding: 1rem 0; 
 }
