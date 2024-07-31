@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
   <meta charset="UTF-8" />
@@ -20,16 +20,15 @@
 
 <body>
 
-  <!-- Navbar -->
-  <section class="navigation" role="navigation">
-    <div class="navbar container flex">
+  <section class="navigation-outer" role="navigation">
+    <div class="navigation-inner container flex">
       <div class="logo">
         <div class="logo-left">
           <i>
             <img id="selfmade-icon" src="../icons/icon-0.1.svg" alt="company logo first letter">
           </i>
         </div>
-        <div class="logo-right">
+        <div class="logo-text">
           <h1>imdustries</h1>
         </div>
       </div>
@@ -38,7 +37,7 @@
           <ul>
             <li><a href="./../index.html">Home</a></li>
             <li><a href="./../pages/features.html">Features</a></li>
-            <li><a href="./../pages/download.html">Download</a></li>          
+            <li><a href="./../pages/download.html">Download</a></li>
           </ul>
         </nav>
       </div>
@@ -47,10 +46,9 @@
 
 
   <!-- Head -->
-  <section class="download-head bg-primary py-3">
+  <section class="download-head bg-primary">
     <div class="container grid">
       <div>
-        <!-- <h1 class="xl">Docs</h1> -->
         <h1>Download.</h1>
         <p>Downloads & Dokumentation.
           <br>
@@ -61,60 +59,57 @@
     </div>
   </section>
 
-    <!-- Docs main -->
-    <section class="download-main my-4">
-      <div class="container grid">
-        <div class="card bg-light p-3">
-          <!-- my-2 entfernt -->
-          <h4>Essentials</h4>
-          <nav>
-            <ul>
-              <li><a class="text-primary" href="#">Introduction</a></li>
-              <li><a href="#">About Timdustries</a></li>
-              <li><a href="#">Installation</a></li>
-            </ul>
-          </nav>
-
-          <!-- my-2 entfernt -->
-          <h4>Deployment</h4>
-          <nav>
-            <ul>
-              <li><a href="#">Setting up a container</a></li>
-              <li><a href="#">Using the CLI</a></li>
-              <li><a href="#">Managing resources</a></li>
-              <li><a href="#">Upgrade & downgrade</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div class="card">
-          <h2>Introduction</h2>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio iste id quia repellendus rem consequatur fugit, recusandae ad ipsam delectus libero totam aut quasi voluptatem omnis similique dignissimos tenetur consectetur modi provident! Possimus quam sit pariatur, officia tempore commodi impedit!
-          </p>
-          <div class="alert alert-success">
-            <i class="fas fa-info"></i>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, praesentium.
-          </div>
-          <h3>Lorem, ipsum dolor.</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis debitis eos quo quae ipsam vitae architecto cupiditate minima tempora esse.
-          </p>
-          <button>
-            <!-- <a href="#" class="btn btn-primary">Install CLI</a> -->
-            <a href="#">Install CLI</a>
-          </button>
-          <h3>Requirements</h3>
+  <!-- Docs main -->
+  <section class="download-main">
+    <div class="container grid">
+      <div class="card bg-light p-3">
+        <h4>Essentials</h4>
+        <nav>
           <ul>
-            <li>Windows 10, Mac OSX, Linux</li>
-            <li>Node.js v12 or higher</li>
+            <li><a class="text-primary" href="#">Grundlegende Informationen</a></li>
+            <li><a href="#">Über Timdustries</a></li>
+            <li><a href="#">Installation</a></li>
           </ul>
-          <h3>Install</h3>
-          <p>Mac (Homebrew)</p>
-          <p><code>$ brew install timdustries-cli</code></p>
-          <p>NPM</p>
-          <p><code>$ npm install timdustries-cli</code></p>
-          <p>Yarn</p>
-          <p><code>$ yarn install timdustries-cli</code></p>
-        </div>
+        </nav>
+        <h4>Deployment</h4>
+        <nav>
+          <ul>
+            <li><a href="#">Einrichten eines Containers</a></li>
+            <li><a href="#">CLI nutzen</a></li>
+            <li><a href="#">Ressourcen managen</a></li>
+            <li><a href="#">Upgrade & downgrade</a></li>
+          </ul>
+        </nav>
       </div>
-    </section>
+      <div class="card">
+        <h2>Anleitung</h2>
+        <p>Die Dokumentation einer Software ist von zentraler Bedeutung, um die Funktionalitäten und Nutzungsmöglichkeiten des Programms klar und verständlich zu vermitteln. Sie dient als umfassende Anleitung für Benutzer, Entwickler und Administratoren und trägt wesentlich zur Effizienz und Zufriedenheit bei der Anwendung bei. Eine gut strukturierte Dokumentation ermöglicht es, die Software schnell zu verstehen und effektiv einzusetzen, während sie gleichzeitig als wertvolle Ressource zur Fehlerbehebung und zur Erweiterung des Systems fungiert. Von Installationsanweisungen bis hin zu detaillierten API-Beschreibungen stellt die Dokumentation sicher, dass alle notwendigen Informationen zugänglich und nachvollziehbar sind.
+        </p>
+        <div class="alert alert-success">
+          <i class="fas fa-info"></i>&nbsp;Beachten Sie aktuelle Änderungen in der neuesten Version in Bezug auf Linux und Mac OS.
+        </div>
+        <h3>Download</h3>
+        <p>
+          Durch Klicken auf den folgenden Button wird der Download automatisch gestartet. Der Vorgang beginnt sofort und die Datei wird direkt auf Ihr Gerät heruntergeladen.
+        </p>
+        <button>
+          <a href="#">Installation</a>
+        </button>
+        <h3>Unterstützte Systeme</h3>
+        <ul>
+          <li>Windows 10, Mac OSX, Linux</li>
+          <li>Node.js v16 oder neuer</li>
+        </ul>
+        <h3>Install</h3>
+        <p>Mac</p>
+        <p><code>$ brew install timdustries-cli</code></p>
+        <p>NPM</p>
+        <p><code>$ npm install timdustries-cli</code></p>
+        <p>Yarn</p>
+        <p><code>$ yarn install timdustries-cli</code></p>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
@@ -122,22 +117,22 @@
       <nav>
         <ul class="flex flex-start">
           <li><a href="./../index.html">Home</a></li>
-          <li><a href="features.html">Features</a></li>
-          <li><a href="download.html">Download</a></li>
+          <li><a href="./features.html">Features</a></li>
+          <li><a href="./download.html">Download</a></li>
         </ul>
       </nav>
       <div class="socials flex-end">
-        <a href="https://github.com/TimLegl/Timdustries"><i class="fa-brands fa-github fa-2x"></i></a>
-        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="https://timlegl.github.io/Timdustries/"><i class="fa-brands fa-github fa-2x"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f fa-2x"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+        <a href="https://www.linkedin.com/in/tim-l-9a017a250"><i class="fa-brands fa-linkedin-in fa-2x"></i></a>
       </div>
       <div id="copyright">
         <h4>Timdustries</h4>
         <p>Copyright &copy; 2024</p>
       </div>
     </div>
-  </footer> 
+  </footer>
 
 </body>
 
