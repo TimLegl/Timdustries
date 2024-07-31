@@ -1,4 +1,4 @@
-/* Schriftimport */
+/* SCHRIFTIMPORT */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 /* HOME WEBSEITE */
@@ -10,18 +10,18 @@
   --error-color: #C91D1D;
 }
 
-/* Default */
+/* DEFAULT */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Nunito, sans-serif; 
+  font-family: Nunito, sans-serif;
 }
 
 body {
   line-height: 1.6;
   background-color: var(--light-color);
-  /* Sieht mit max-width beim rauszoomen besser aus */
+  /* Sieht mit max-width beim rauszoomen besser aus & Form wird sonst bei Zoom abgeschnitten */
   max-width: 1500px;
   margin: 0 auto;
 }
@@ -65,7 +65,7 @@ img {
   width: 100%;
 }
 
-/* Button Variante 1 */
+/* BUTTON */
 button {
   color: var(--light-color);
   width: auto;
@@ -74,60 +74,53 @@ button {
   border-radius: 5px;
   border: none;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  /* transition legt einen Übergangseffekt fest.
-  Hier wird festgelegt, dass der Übergang über die transform-Eigenschaft erfolgt.
-  Die Dauer des Übergangs wird auf 0,5 Sekunden festgelegt.
-  "ease-in-out" bedeutet einen langsamen Start und ein langsames Ende.
-  0.1s am Ende definiert die Verzögerung der Animation, sobald Sie durch hover ausgelöst wird
-  */
   transition: transform 0.5s ease-in-out 0.1s;
   font-size: 1.2rem;
 }
 
 button:hover {
-  /* Der Transformations-Effekt tritt ein, sobald über ein "button"-Element gehovert wird.
-  scale(0.95) wird verwendet um den Button auf 95% der Originalgröße zu reduzieren.
-  */
   transform: scale(0.95);
 }
 
-/* NAVBAR */
-.navigation {
+.navigation-outer {
   background-color: var(--secondary-color);
   height: 70px;
 }
 
-.navbar {
+.navigation-inner {
   background-color: var(--secondary-color);
   color: #fff;
   height: 70px;
 }
 
-.navbar ul {
+.navigation-inner ul {
   display: flex;
 }
 
-.navbar a {
+.navigation-inner a {
   text-decoration: none;
   padding: 10px;
   margin: 0 5px;
   color: var(--primary-color);
-  border-bottom: 2px solid transparent; /* Rahmen unten ohne hover auf transparent setzen */
-  transition: border-bottom 0.5s ease-in-out 0.1s; /* Rahmen unten Übergang */
+  border-bottom: 2px solid transparent;
+  /* Rahmen unten ohne hover auf transparent setzen */
+  transition: border-bottom 0.5s ease-in-out 0.1s;
+  /* Rahmen unten Übergang */
 }
 
-.navbar a:hover {
-  border-bottom: 2px solid var(--primary-color); /* Rahmen unten Syle Änderung bei hover */
+.navigation-inner a:hover {
+  border-bottom: 2px solid var(--primary-color);
+  /* Rahmen unten Syle Änderung bei hover */
 }
 
-.navbar .flex{
+.navigation-inner .flex {
   background-color: var(--primary-color);
   color: #fff;
   height: 70px;
   justify-content: space-between;
 }
 
-.navbar i {
+.navigation-inner i {
   display: flex;
   width: 52px;
   align-items: center;
@@ -142,28 +135,29 @@ button:hover {
   display: flex;
 }
 
-.logo-right {
+.logo-text {
   align-self: flex-end;
 }
 
-/* SHOWCASE - KONTAKTFORMULAR */
-.showcase {
+/* KONTAKT-MODUL */
+.kontakt-modul {
   position: relative;
   background-color: var(--primary-color);
   padding: 50px 0;
 }
 
-.showcase h2, p {
+.kontakt-modul h2,
+p {
   color: var(--secondary-color);
 }
 
-.showcase-form h2 {
+.kontakt-modul-formular h2 {
   padding: 0 0 1rem;
 }
 
-/* Schräger Balken
-.showcase::before,
-.showcase::after {
+/* SCHRÄGER BALKEN ALTERNATIVE
+.kontakt-modul::before,
+.kontakt-modul::after {
   content: '';
   position: absolute;
   height: 120px;
@@ -178,30 +172,32 @@ button:hover {
 }
 */
 
-.showcase .text {
+.kontakt-modul .text {
   animation: slideInFromLeft 1s ease-in;
 }
 
-.showcase-form {
+.kontakt-modul-formular {
   animation: slideInFromRight 1s ease-in;
   z-index: 1;
   position: relative;
 }
 
-.showcase .grid {
+.kontakt-modul .grid {
   overflow: visible;
   gap: 3rem;
 }
 
-.showcase-form input[type='text'],
-.showcase-form input[type='email'] {
+.kontakt-modul-formular input[type='text'],
+.kontakt-modul-formular input[type='email'] {
   margin: 20px 0;
-  padding: 3px; /*Abstand zwischen border und placeholder-Text der Input Felder */
+  padding: 3px;
+  /* Abstand zwischen border und placeholder-Text der Input Felder */
   background-color: var(--light-color);
   color: var(--secondary-color);
   /* border: 0; */
   border: none;
-  border-radius: 0; /* Wichtig für Mobile Version */
+  border-radius: 0;
+  /* Wichtig für Mobile Version */
   border-bottom: 1px solid var(--secondary-color);
   width: 100%;
   font-size: 1.4rem;
@@ -217,23 +213,13 @@ input:-webkit-autofill {
 }
 */
 
-.showcase-form input:focus {
-  outline: none; /* Entfernt Rahmen beim Klicken auf Input Feld */
+.kontakt-modul-formular input:focus {
+  outline: none;
+  /* Entfernt Rahmen beim Klicken auf Input Feld */
 }
 
-.showcase button {
+.kontakt-modul button {
   margin-top: 20px;
-}
-
-.card {
-  border: none;
-  padding: 20px;
-  border-radius: 10px;
-  position: relative;
-  z-index: 1; /* Positioniert Formular im Vordergrund */
-  background-color: var(--light-color);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  min-width: 122px;
 }
 
 input:focus {
@@ -257,7 +243,8 @@ input[type="text"] {
 .references {
   padding: 50px 0;
   background-color: var(--secondary-color);
-  position: relative;  /* Macht Elemente sichtbar, sonst werden sie von der Wellenform überdeckt */
+  position: relative;
+  /* Macht Elemente sichtbar, sonst werden sie von der Wellenform überdeckt */
   /* Keine feste Höhe, sonst rutschen Bilder und Text beim verkleinern aus dem Container
   height: 500px; */
 }
@@ -269,12 +256,15 @@ input[type="text"] {
   background-color: var(--primary-color);
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: cover; /* Cover für Desktop, contain für Mobile */
+  background-size: cover;
+  /* Cover für Desktop, contain für Mobile */
   position: relative;
   /* border: none; */
   /* outline: none; */
-  /* margin-bottom: -4px; Verhindert schmalen Rahmen zwischen Modulen */
-  height: 140px; /* Macht Form sichtbar */
+  /* Verhindert schmalen Rahmen zwischen Modulen */
+  margin-bottom: -2px;
+  height: 140px;
+  /* Macht Form sichtbar */
 }
 
 .references .grid {
@@ -321,65 +311,22 @@ input[type="text"] {
 .examples .card {
   /* Ausgangszustand */
   transform: translateY(0);
-  height: 100%; /* Passt Höhe der Karte an Elterncontainer an */
+  height: 100%;
+  /* Passt Höhe der Karte an Elterncontainer an */
   text-align: center;
   display: flex;
   align-items: center;
 }
-
-/*
-Legt zu verändernde Eigenschaft(en) fest
-.examples .card {
-  transition-property: background-color;
-}
-Verändert die gewählte(n) Eigenschaft(en) bei einem :hover Ereignis über das Element
-.examples .card:hover {
-  background-color: red;
-}
-
-Die TRANSITION Eigenschaft beinhaltet die VIER 2D Transformationseigenschaften in einem Attribut:
-transition-property
-transition-duration
-transition-timing-function
-transition-delay
-
-Die transition-Eigenschaft wird genutzt um den Übergangseffekt eines Elements zwischen 2 oder mehr Zuständen zu definieren.
-Man muss dabei den Start- und Endzustand festlegen. (Hier vor dem Hover und nach dem Hover)
-
-ease - specifies a transition effect with a slow start, then fast, then end slowly (default)
-linear - specifies a transition effect with the same speed from start to end
-ease-in - specifies a transition effect with a slow start
-ease-out - specifies a transition effect with a slow end
-ease-in-out - specifies a transition effect with a slow start and end
-cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function
-
-
-Mit der TRANSFORM Eigenschaft lassen sich Objekte drehen, skalieren, verzerren, versetzen (rotate, scale, skew, translate)
-*/
 
 .examples .card:hover {
   /* Kurzschreibweise */
   transition: transform 0.5s ease-in-out 0.1s;
   /* Endzustand */
   transform: translateY(-15px);
-  /*
-  Lange Schreibweise
-  transition-duration: 2s;
-  transition-timing-function: ease-in;
-  transition-delay: 2s;
-  */
 }
 
 .examples .card:not(:hover) {
-  /* Kurzschreibweise */
   transition: transform 0.5s ease-out 0.1s;
-  /* Endzustand */
-  /*
-  Lange Schreibweise
-  transition-duration: 2s;
-  transition-timing-function: ease-in;
-  transition-delay: 2s;
-  */
 }
 
 /* CLI - COMMAND LINE INTERFACE*/
@@ -399,7 +346,7 @@ Mit der TRANSFORM Eigenschaft lassen sich Objekte drehen, skalieren, verzerren, 
 }
 
 /* first-child = "img" in diesem Fall */
-.cli .grid > *:first-child {
+.cli .grid>*:first-child {
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
 }
@@ -445,12 +392,14 @@ Mit der TRANSFORM Eigenschaft lassen sich Objekte drehen, skalieren, verzerren, 
   animation: rotieren 3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-/* 360 Grad Drehung Animation */
+/* 360 GRAD DREHUNG ANIMATION */
 @keyframes rotieren {
+
   /* Startzustand */
   from {
     transform: rotate(0deg);
   }
+
   /* Endzustand */
   to {
     transform: rotate(360deg);
@@ -460,6 +409,7 @@ Mit der TRANSFORM Eigenschaft lassen sich Objekte drehen, skalieren, verzerren, 
 .company a {
   color: var(--primary-color);
 }
+
 /* CLOUD */
 .cloud {
   background-color: var(--secondary-color);
@@ -486,7 +436,6 @@ Mit der TRANSFORM Eigenschaft lassen sich Objekte drehen, skalieren, verzerren, 
 
 .cloud .grid {
   grid-template-columns: 1fr;
-  /* gap: 40px; */
 }
 
 .cloud a {
@@ -514,7 +463,7 @@ Mit der TRANSFORM Eigenschaft lassen sich Objekte drehen, skalieren, verzerren, 
 
 .supported-languages .card {
   margin: 20px 20px;
-  /* Langsame Bewegung bei :hover */
+  /* Transition bei :hover */
   transition: transform 0.5s ease-in-out 0.1s;
   text-align: center;
 }
@@ -557,7 +506,8 @@ footer nav a {
 }
 
 footer nav a:hover {
-  border-bottom: 2px solid var(--primary-color); /* Ändere die untere Grenze bei Hover */
+  border-bottom: 2px solid var(--primary-color);
+  /* Ändere Rahmen unten bei Hover */
 }
 
 .socials {
@@ -591,48 +541,8 @@ footer nav a:hover {
   font-size: 1.2rem;
 }
 
-/* UTILITIES */
-/* Rahmen */
-
-.flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.flex-start {
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-.flex-column {
-  flex-direction: column;
-}
-
-.flex-end {
-  justify-content: flex-end;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.grid-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.grid-6 {
-  grid-template-columns: repeat(6, 1fr);
-}
-
 .grid-footer {
   grid-template-columns: 1fr 1fr;
-}
-
-.text-center {
-  text-align: center;
 }
 
 .seperator {
@@ -656,6 +566,7 @@ footer nav a:hover {
   0% {
     transform: translateX(100%)
   }
+
   100% {
     transform: translateX(0);
   }
@@ -665,6 +576,7 @@ footer nav a:hover {
   0% {
     transform: translateY(-100%);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -674,12 +586,13 @@ footer nav a:hover {
   0% {
     transform: translateY(100%);
   }
+
   100% {
     transform: translateX(0);
   }
 }
 
-/* EIGENE FORMULAR FEHLERMELDUNGEN */
+/* EIGENE kontakt-modul FEHLERMELDUNGEN */
 .fehlermeldungText::placeholder {
   color: var(--error-color);
   font-size: 1.2rem;
@@ -691,20 +604,22 @@ footer nav a:hover {
   line-height: 1.6rem;
 }
 
-.hinweisRahmenDreieck{
+.hinweisRahmenDreieck {
   color: var(--error-color);
   background-color: var(--light-color);
-  position: relative; /* WICHTIG um dreieck relativ zu dem p-Element zu platzieren */
+  position: relative;
+  /* WICHTIG um dreieck relativ zu dem p-Element zu platzieren */
 }
 
 .hinweisRahmen {
-  /* Muss important beinhalten, da sonst von showcase-form input[type=text] überschrieben wird, da dies spezifischer ist */
+  /* Muss important beinhalten, da sonst von kontakt-modul-formular input[type=text] überschrieben wird, da dies spezifischer ist */
   border: 1px solid var(--error-color) !important;
 }
 
 /* Inneres Dreieck */
 .hinweisRahmenDreieck::after {
-  content: ''; /* Element sichtbar machen */
+  content: '';
+  /* Element sichtbar machen */
   position: absolute;
   left: calc(50% - 9px);
   /* Muss um border-Stärke von hinweisRahmen niedriger sein als bei :: before */
@@ -730,7 +645,7 @@ footer nav a:hover {
 
 /* MEDIA QUERIES VON ALLGEMEIN NACH SPEZIFISCHER AUFBAUEN, DA BEISPIELSWEISE DIE REGELN VON "max-width: 768px" AUCH AUF "max-width: 500px" ANGEWANDT WERDEN, DA ALLES UNTER 768 AUCH 500 BEINHALTET */
 
-/* Tablets und darunter */
+/* TABLETS UND DARUNTER */
 @media (max-width: 768px) {
 
   h1 {
@@ -753,15 +668,12 @@ footer nav a:hover {
     font-size: 0.96rem;
   }
 
-  .showcase-form input[type='text'], .showcase-form input[type='email'] {
-    font-size: 1.12rem;
-  }
-
   button {
     font-size: 1.12rem;
   }
 
-  .navigation h1 {
+  /* NAVIGATION */
+  .navigation-outer h1 {
     font-size: 1.2rem;
   }
 
@@ -769,10 +681,15 @@ footer nav a:hover {
     font-size: 0.9rem;
   }
 
-  /* SHOWCASE */
-  .showcase .grid {
+  /* KONTAKT-MODUL */
+  .kontakt-modul .grid {
     grid-template-columns: 1fr;
     gap: 1.25rem;
+  }
+
+  .kontakt-modul-formular input[type='text'],
+  .kontakt-modul-formular input[type='email'] {
+    font-size: 1.12rem;
   }
 
   /* REFERENZEN */
@@ -786,7 +703,7 @@ footer nav a:hover {
   }
 
   /* CLI */
-  .cli .grid > *:first-child {
+  .cli .grid>*:first-child {
     grid-column: 1;
     grid-row: 1;
   }
@@ -823,12 +740,15 @@ footer nav a:hover {
   }
 }
 
+/* MOBILE */
 @media (max-width: 500px) {
+
   /* UTILITIES */
   .container {
     padding: 0 1rem;
   }
 
+  /* STYLE */
   h1 {
     font-size: 1.28rem;
   }
@@ -849,10 +769,6 @@ footer nav a:hover {
     font-size: 0.77rem;
   }
 
-  .showcase-form input[type='text'], .showcase-form input[type='email'] {
-    font-size: 0.9rem;
-  }
-
   button {
     font-size: 0.96rem;
   }
@@ -861,49 +777,53 @@ footer nav a:hover {
   .logo {
     margin: 0;
   }
-
-  .navigation {
-    height: 120px;
+  
+  .navigation-inner {
+    height: 100%;
   }
-
-  .navigation .flex {
+  
+  .navigation-outer .flex {
     justify-content: space-between;
   }
 
-  .navigation h1 {
+  .navigation-outer {
+    height: 120px;
+  }
+
+  .navigation-outer h1 {
     font-size: 1rem;
   }
 
-  .navbar ul {
+  .navigation-inner ul {
     flex-direction: column;
     padding: 10px;
   }
 
-  .navbar ul li {
+  .navigation-inner ul li {
     /* padding: 1rem; */
     padding: 1vw;
   }
 
-  /* SHOWCASE */
-
-  .showcase {
+  /* kontakt-modul */
+  .kontakt-modul {
     padding: 2rem 0;
   }
 
-  .showcase-form h2 {
+  .kontakt-modul-formular h2 {
     padding-bottom: 0.5rem;
   }
 
-  .showcase .grid {
+  .kontakt-modul .grid {
     grid-template-columns: 1fr;
     gap: 1.25rem;
   }
 
-  .showcase-form input[type='text'], .showcase-form input[type='email'] {
+  .kontakt-modul-formular input[type='text'],
+  .kontakt-modul-formular input[type='email'] {
     font-size: 0.875rem;
   }
 
-  /* SHOWCASE FEHLERMELDUNG */
+  /* kontakt-modul FEHLERMELDUNG */
   .fehlermeldungText::placeholder {
     font-size: 0.75rem;
   }
@@ -942,7 +862,7 @@ footer nav a:hover {
     padding: 2rem 1rem;
   }
 
-  .cli .grid > *:first-child {
+  .cli .grid>*:first-child {
     grid-column: 1;
     grid-row: 1 / span 2;
   }
@@ -1002,7 +922,8 @@ footer nav a:hover {
 
   .socials {
     gap: 20px;
-    grid-column: 1 / 3; /* Nimmt ganze Breite ein: Spalte 1 bis 3 (Entspricht Spalte 1 und 2) */
+    grid-column: 1 / 3;
+    /* Nimmt ganze Breite ein: Spalte 1 bis 3 (Entspricht Spalte 1 und 2) */
   }
 
   .socials svg {
