@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Generelles Styling zu spezifischerem Styling -->
+  <!-- Erst allgemeine Styles einbinden, dann spezifischere -->
   <link rel="stylesheet" href="./styles/utilities.css">
   <link rel="stylesheet" href="./styles/style.css">
+
   <!-- Font Awesome Kit -->
   <script src="https://kit.fontawesome.com/b703539e16.js" crossorigin="anonymous"></script>
   <!-- Font Awesome / lokal eingebunden -->
@@ -25,15 +26,15 @@
 <body>
 
   <!-- Obere Navigationsleiste / role = Landmark-Role Orientierungspunkt für Screenreader (blinde) -->
-  <section class="navigation" role="navigation">
-    <div class="navbar container flex">
+  <section class="navigation-outer" role="navigation">
+    <div class="navigation-inner container flex">
       <div class="logo">
         <div class="logo-left">
           <i>
             <img id="selfmade-icon" src="./icons/icon-0.1.svg" alt="company logo first letter">
           </i>
         </div>
-        <div class="logo-right">
+        <div class="logo-text">
           <h1>imdustries</h1>
         </div>
       </div>
@@ -49,8 +50,8 @@
     </div>
   </section>
 
-  <!-- Kontaktformular -->
-  <section class="showcase" role="showcase">
+  <!-- KONTAKT-MODUL -->
+  <section class="kontakt-modul" role="kontakt-modul">
     <div class="container grid">
       <!-- linkes Element -->
       <div class="text">
@@ -61,7 +62,7 @@
         </p>
       </div>
       <!-- rechtes Element -->
-      <div class="showcase-form">
+      <div class="kontakt-modul-formular">
         <h2>Kontakt aufnehmen</h2>
         <!-- novalidate-Attribut entfernt die Standard Fehlermeldungen -->
         <form class="card" action="#" novalidate>
@@ -129,7 +130,7 @@
   <!-- Cli -->
   <section class="cli" role="cli">
     <div class="container grid">
-      <!-- Padding bei img anstatt bei Section einbauen wegen hover-Effekt in mobiler Version -->
+      <!-- Padding bei img anstatt bei Section einbauen wegen hover-Effekt -->
       <img src="./images/cli-powerShell-cmd-color.svg" alt="">
       <div class="card">
         <p>Einfach zu nutzen auf allen Plattformen</p>
@@ -157,7 +158,7 @@
       </p>
       <p>Deshalb suche ich ab sofort Verstärkung für mein 1-Mann-Team. Schicken Sie mir einfach eine E-Mail mit Ihrem
         Lebenslauf!</p>
-      <!-- 0.01 Outline -->
+      <!-- 0.1 Outline -->
       <img id="company-logo" src="./icons/icon-0.1.svg" alt="company-logo">
       <button><a href="#LINK">Jetzt bewerben</a></button>
     </div>
@@ -238,10 +239,10 @@
         </ul>
       </nav>
       <div class="socials flex-end">
-        <a href="https://github.com/TimLegl/Timdustries"><i class="fa-brands fa-github fa-2x"></i></a>
+        <a href="https://timlegl.github.io/Timdustries/"><i class="fa-brands fa-github fa-2x"></i></a>
         <a href="#"><i class="fa-brands fa-facebook-f fa-2x"></i></a>
         <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
-        <a href="www.linkedin.com/in/tim-l-9a017a250"><i class="fa-brands fa-linkedin-in fa-2x"></i></a>
+        <a href="https://www.linkedin.com/in/tim-l-9a017a250"><i class="fa-brands fa-linkedin-in fa-2x"></i></a>
       </div>
       <div id="copyright">
         <h4>Timdustries</h4>
